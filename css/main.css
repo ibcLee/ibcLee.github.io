@@ -961,7 +961,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa9959;
+  background: #41ffc7;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1941,7 +1941,6 @@ ul li {
 }
 .site-meta {
   float: left;
-  margin-left: -20px;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -1974,7 +1973,7 @@ ul li {
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .logo-line-before,
