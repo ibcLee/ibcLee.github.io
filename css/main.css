@@ -961,7 +961,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2dffff;
+  background: #85e28b;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1068,7 +1068,7 @@ body {
 }
 .powered-by,
 .theme-info {
-  display: inline-block;
+  display: none;
 }
 .powered-by {
   margin-right: 10px;
@@ -2071,12 +2071,18 @@ ul li {
 .posts-expand {
   padding-top: 0;
 }
-.posts-expand .post-title,
-.posts-expand .post-meta {
-  text-align: left;
+.posts-expand .post-title {
+  text-align: center;
 }
 @media (max-width: 767px) {
-  .posts-expand .post-title,
+  .posts-expand .post-title {
+    text-align: center;
+  }
+}
+.posts-expand .post-meta {
+  text-align: right;
+}
+@media (max-width: 767px) {
   .posts-expand .post-meta {
     text-align: center;
   }
