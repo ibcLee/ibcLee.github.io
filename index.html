@@ -199,15 +199,100 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/14/多行文本溢出显示省略号/" itemprop="url">
+                  多行文本溢出显示省略号...
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-14T11:34:17+08:00" content="2015-12-14">
+              2015-12-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/14/多行文本溢出显示省略号/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/多行文本溢出显示省略号/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
-        
-        
-        
       
 
       
-    
+        
+          <span itemprop="articleBody">
+            
+              <p>单行文本溢出显示省略号的方法很容易实现<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.</p>
+<h3 id="-webkit-line-clamp">-webkit-line-clamp</h3><p>webkit内核的浏览器支持一种叫-webkit-line-clamp的属性,但这个属性并不是标准的一部分.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.text&#123;</span><br><span class="line">  display: -webkit-box; //必须结合的属性,将对象作为弹性的伸缩盒子模型显示</span><br><span class="line">  overflow : hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  -webkit-line-clamp: 2; //用来限制一个块元素显示的文本的行数</span><br><span class="line">  -webkit-box-orient: vertical; //必须结合的属性,设置或检索伸缩和对象的子元素的排列方式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="-o-ellipsis-lastline">-o-ellipsis-lastline</h3><p>从Opera10.60开始,text-overflow新增加一个叫-oo-ellipsis-lastline的值,意思是在文本的最后一行加上省略号,但同样不在标准内.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> normal</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">3em</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> -o-ellipsis-lastline</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="jQuery">jQuery</h3><p>通过js从后向前逐个删除末尾的字符,直至元素的高度小于父元素的高度,并在末尾加上…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".figcaption"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divH = $(<span class="keyword">this</span>).height();</span><br><span class="line">    <span class="keyword">var</span> $p = $(<span class="string">"p"</span>, $(<span class="keyword">this</span>)).eq(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> ($p.outerHeight() &gt; divH) &#123;</span><br><span class="line">        $p.text($p.text().replace(<span class="regexp">/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/</span>, <span class="string">"..."</span>));</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="jQuery插件(dotdotdot-js)">jQuery插件(dotdotdot.js)</h3><p>不详细解释了,附上文档链接:<br><a href="http://dotdotdot.frebsite.nl/" target="_blank" rel="external">dotdotdot.js文档</a></p>
+<p>最后还有一种方法:让产品改需求,让设计改设计…</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -325,6 +410,188 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/13/移动端上传图片/" itemprop="url">
+                  移动端上传图片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-13T14:35:22+08:00" content="2015-12-13">
+              2015-12-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/13/移动端上传图片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/13/移动端上传图片/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>最近做了一个移动端上传并展示图片的功能,利用html5的文件读取功能,简单的记录一下.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">label</span>&gt;</span>请选择一个图像文件：<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"file"</span> <span class="attribute">id</span>=<span class="value">"file_input"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"result"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> result = <span class="built_in">document</span>.getElementById(<span class="string">"result"</span>);</span><br><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">"file_input"</span>);  </span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> FileReader===<span class="string">'undefined'</span>)&#123;</span><br><span class="line">    result.innerHTML = <span class="string">"抱歉，你的浏览器不支持 FileReader"</span>;</span><br><span class="line">    input.setAttribute(<span class="string">'disabled'</span>,<span class="string">'disabled'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    input.addEventListener(<span class="string">'change'</span>,readFile,<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">readFile</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> file = <span class="keyword">this</span>.files[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span>(!<span class="regexp">/image\/\w+/</span>.test(file.type))&#123;</span><br><span class="line">        alert(<span class="string">"文件必须为图片！"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">    reader.readAsDataURL(file);</span><br><span class="line">    reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">        result.innerHTML = <span class="string">'&lt;img src="'</span>+<span class="keyword">this</span>.result+<span class="string">'" alt=""/&gt;'</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在一般的情况下,都会隐藏type=’file’的默认按钮样式,如需上传展示图片,都会通过trigger实现点击头像,触发type=’file’的click事件来实现点击头像展示区域,实现,上传头像的功能.</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/22/文章题目/" itemprop="url">
+                  谈谈最近
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-11-22T21:17:34+08:00" content="2015-11-22">
+              2015-11-22
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/22/文章题目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/22/文章题目/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>博客搭好也已经半个多月了,一直想在这上面写点啥,也有点拖延症,有时间的时候只想躺着,今晚终于兴起了,随便聊聊最近,作为博客的第一篇文章,也不知道是想给谁看.</p>
+<p>最近啊,也经历了不少,从九月份被辞,而且无家可归,寄居在同学家窗台,好在找到了一份自己很满意的工作,而且也刚刚搬进了新的小窝,下周也转正了,但是还是感觉挺累的,不是工作上,也肯定是闲的时间太多,想的太多.工作不是很累,作为一名刚毕业的学生进入一家创业公司,我现在应该也已经算是在享受了,看着同学经常都是加班到深夜,感觉我现在像是在虚度时光,很怕几年不上进在北京混不下去,唉~~</p>
+<p>最近总是在刷知乎微博的时候,看到BAT的大牛年薪几十上百万说在北京没有未来,自己就又在想一个普通二流本科毕业的北漂真的能在北京扎下么?看着家里的同学过得生活就是自己几年后想达到的生活,在外面漂得没人家努力,又没勇气放弃一切回家,好想给自己喝点鸡汤…</p>
+<p>啰嗦的话就说这么多吧,建这个博客的目的也是想提高自己,督促一下自己,在自己的专业技能上能有所提高,大牛不都是写博客么!写点生活琐事,唠叨唠叨墨迹墨迹,写点文章,找找当年写作文的感觉,真的是封笔已经好多年了,应该把最近的每一次的总结记录一下,好文章摘抄一下,以后也是对自己的北漂生活有个回忆.</p>
+<p>好了,就酱~~打打鸡血,好好努力!</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
 
   </section>
 
@@ -367,7 +634,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
