@@ -53,22 +53,16 @@
 
 
 
-<meta name="description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;
-但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.
--webkit-line">
+<meta name="description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多行文本溢出显示省略号...">
 <meta property="og:url" content="http://yoursite.com/2015/12/14/多行文本溢出显示省略号/index.html">
 <meta property="og:site_name" content="Libbbbc的个人博客">
-<meta property="og:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;
-但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.
--webkit-line">
-<meta property="og:updated_time" content="2015-12-14T04:01:51.000Z">
+<meta property="og:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
+<meta property="og:updated_time" content="2016-01-19T02:45:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多行文本溢出显示省略号...">
-<meta name="twitter:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;
-但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.
--webkit-line">
+<meta name="twitter:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
 
 
 
@@ -261,6 +255,7 @@
 
       
         <span itemprop="articleBody"><p>单行文本溢出显示省略号的方法很容易实现<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.</p>
 <h3 id="webkit-line-clamp"><a href="#webkit-line-clamp" class="headerlink" title="-webkit-line-clamp"></a>-webkit-line-clamp</h3><p>webkit内核的浏览器支持一种叫-webkit-line-clamp的属性,但这个属性并不是标准的一部分.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.text&#123;</span><br><span class="line">  display: -webkit-box; //必须结合的属性,将对象作为弹性的伸缩盒子模型显示</span><br><span class="line">  overflow : hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  -webkit-line-clamp: 2; //用来限制一个块元素显示的文本的行数</span><br><span class="line">  -webkit-box-orient: vertical; //必须结合的属性,设置或检索伸缩和对象的子元素的排列方式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="o-ellipsis-lastline"><a href="#o-ellipsis-lastline" class="headerlink" title="-o-ellipsis-lastline"></a>-o-ellipsis-lastline</h3><p>从Opera10.60开始,text-overflow新增加一个叫-oo-ellipsis-lastline的值,意思是在文本的最后一行加上省略号,但同样不在标准内.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> normal</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">3em</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> -o-ellipsis-lastline</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
