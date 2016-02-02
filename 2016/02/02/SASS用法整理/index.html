@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Life," />
+  <meta name="keywords" content="SASS," />
 
 
 
@@ -53,16 +53,19 @@
 
 
 
-<meta name="description" content="我的201515年应该是自己人生中的一个转折点，2015年，我毕业了。生活的圈子由校园变成了社会；陪伴的人由同学变成了同事；居住的地方由20平米的宿舍变成了10平米的出租屋；手机由Mi2s变成了iPhone6s；电脑由联想小新变成了mackbook pro；2015年，我过的很好，nice的同事，超棒的工作环境，可观的薪水，作为一名新晋北漂我没有吃太多的苦；2015年，我在一点一点实现自己的理想的">
+<meta name="description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。
+1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写于2016-01-01">
-<meta property="og:url" content="http://yoursite.com/2016/01/01/写于2016-01-01/index.html">
+<meta property="og:title" content="SASS用法整理">
+<meta property="og:url" content="http://yoursite.com/2016/02/02/SASS用法整理/index.html">
 <meta property="og:site_name" content="ibcLee's home">
-<meta property="og:description" content="我的201515年应该是自己人生中的一个转折点，2015年，我毕业了。生活的圈子由校园变成了社会；陪伴的人由同学变成了同事；居住的地方由20平米的宿舍变成了10平米的出租屋；手机由Mi2s变成了iPhone6s；电脑由联想小新变成了mackbook pro；2015年，我过的很好，nice的同事，超棒的工作环境，可观的薪水，作为一名新晋北漂我没有吃太多的苦；2015年，我在一点一点实现自己的理想的">
-<meta property="og:updated_time" content="2016-01-19T02:43:10.000Z">
+<meta property="og:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。
+1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：">
+<meta property="og:updated_time" content="2016-02-02T09:32:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写于2016-01-01">
-<meta name="twitter:description" content="我的201515年应该是自己人生中的一个转折点，2015年，我毕业了。生活的圈子由校园变成了社会；陪伴的人由同学变成了同事；居住的地方由20平米的宿舍变成了10平米的出租屋；手机由Mi2s变成了iPhone6s；电脑由联想小新变成了mackbook pro；2015年，我过的很好，nice的同事，超棒的工作环境，可观的薪水，作为一名新晋北漂我没有吃太多的苦；2015年，我在一点一点实现自己的理想的">
+<meta name="twitter:title" content="SASS用法整理">
+<meta name="twitter:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。
+1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：">
 
 
 
@@ -74,7 +77,7 @@
   };
 </script>
 
-  <title> 写于2016-01-01 | ibcLee's home </title>
+  <title> SASS用法整理 | ibcLee's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -204,7 +207,7 @@
             
             
               
-                写于2016-01-01
+                SASS用法整理
               
             
           </h1>
@@ -213,8 +216,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T21:22:03+08:00" content="2016-01-01">
-              2016-01-01
+            <time itemprop="dateCreated" datetime="2016-02-02T11:08:48+08:00" content="2016-02-02">
+              2016-02-02
             </time>
           </span>
 
@@ -224,8 +227,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/01/写于2016-01-01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/01/写于2016-01-01/" itemprop="commentsCount"></span>
+                <a href="/2016/02/02/SASS用法整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/02/SASS用法整理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -244,19 +247,19 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="u6211_u76842015"><a href="#u6211_u76842015" class="headerlink" title="我的2015"></a>我的2015</h2><p>15年应该是自己人生中的一个转折点，2015年，我毕业了。<br>生活的圈子由校园变成了社会；<br>陪伴的人由同学变成了同事；<br>居住的地方由20平米的宿舍变成了10平米的出租屋；<br>手机由Mi2s变成了iPhone6s；<br>电脑由联想小新变成了mackbook pro；<br>2015年，我过的很好，nice的同事，超棒的工作环境，可观的薪水，作为一名新晋北漂我没有吃太多的苦；<br>2015年，我在一点一点实现自己的理想的生活…<br><a id="more"></a></p>
-<h2 id="2016_TODOLIST"><a href="#2016_TODOLIST" class="headerlink" title="2016 TODOLIST"></a>2016 TODOLIST</h2><p>新年总是要有新计划的，计划总是要有的，万一实现了呢？<br>2015年下半年适应了身份由学生到职场新人的转变，2016年要适应自己融入这个社会，不会有很多人去义务帮你，一切要靠自己，不要养成依赖，无论是工作还是生活上，每一个帮助过你的人要铭记。</p>
-<p>2016年：</p>
-<ol>
-<li>写够40篇博客</li>
-<li>看够20本书</li>
-<li>有两次短途旅行</li>
-<li>学会AngularJs，ReactJs<br>5.学会调色，熟练使用photoshop（为2017年的单反做准备）</li>
-<li>去影院看10场电影</li>
-<li>多学会10道菜</li>
-<li>涨一次薪水</li>
-<li>了解coffee<br>。。。未完，后续补充</li>
-</ol>
+        <span itemprop="articleBody"><p>SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。</p>
+<h3 id="1-_u7F16_u8BD1"><a href="#1-_u7F16_u8BD1" class="headerlink" title="1.编译"></a>1.编译</h3><p>作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：<br>&gt;<br>// watch a file<br>sass –watch input.scss:output.css<br>// watch a directory<br>sass –watch app/sass:public/stylesheets</p>
+<h3 id="2-_u53D8_u91CF"><a href="#2-_u53D8_u91CF" class="headerlink" title="2.变量"></a>2.变量</h3><p>变量可以镶嵌在字符串中，必须要写在#{}中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$side: left;&#10;.rounded &#123;&#10;  border-#&#123;$side&#125;-radius: 5px;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#22810;&#20540;&#21464;&#37327;&#10;$linkColor: #08c #333 !default;//&#31532;&#19968;&#20010;&#20540;&#20026;&#40664;&#35748;&#20540;&#65292;&#31532;&#20108;&#20010;&#40736;&#26631;&#28369;&#36807;&#20540;&#10;a&#123;&#10;  color:nth($linkColor,1);&#10;&#10;  &#38;:hover&#123;&#10;    color:nth($linkColor,2);&#10;  &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-_u5C5E_u6027_u5D4C_u5957"><a href="#3-_u5C5E_u6027_u5D4C_u5957" class="headerlink" title="3.属性嵌套"></a>3.属性嵌套</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//sass style&#10;//-------------------------------&#10;.fakeshadow &#123;&#10;  border: &#123;&#10;    style: solid;&#10;    left: &#123;&#10;      width: 4px;&#10;      color: #888;&#10;    &#125;&#10;    right: &#123;&#10;      width: 2px;&#10;      color: #ccc;&#10;    &#125;&#10;  &#125;&#10;&#125;&#10;&#10;//css style&#10;//-------------------------------&#10;.fakeshadow &#123;&#10;  border-style: solid;&#10;  border-left-width: 4px;&#10;  border-left-color: #888;&#10;  border-right-width: 2px;&#10;  border-right-color: #ccc; &#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-_u7EE7_u627F"><a href="#4-_u7EE7_u627F" class="headerlink" title="4.继承"></a>4.继承</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//class2&#32487;&#25215;class1&#10;.class1 &#123;&#10;&#12288;&#9;border: 1px solid #ddd;&#10;&#125;&#10;.class2 &#123;&#10;&#12288; @extend .class1;&#10;&#12288; font-size:120%;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-Mixin"><a href="#5-Mixin" class="headerlink" title="5.Mixin"></a>5.Mixin</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#23450;&#20041;&#20195;&#30721;&#22359;&#10;@mixin left($value:10px)&#123;&#10;&#9;float:left;&#10;&#9;margin-left:$value;&#10;&#125;&#10;div&#123;&#10;&#9;@include left(20px);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-_u6761_u4EF6_u8BED_u53E5"><a href="#6-_u6761_u4EF6_u8BED_u53E5" class="headerlink" title="6.条件语句"></a>6.条件语句</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;&#10;&#9;@if 1+1==2&#10;&#9;&#9;&#123;border:1px solid;&#125;&#10;&#9;@if 5&#60;3&#10;&#9;&#9;&#123;border:2px dotted&#125;&#10;&#9;@if lightness($color)&#62;30%&#123;&#10;&#9;&#9;background-color:#000;&#16;&#16;&#10;&#9;&#125;@else&#123;&#10;&#9;&#9;abckground-color:#fff;&#16;&#16;&#10;&#9;&#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-_u5FAA_u73AF_u8BED_u53E5"><a href="#7-_u5FAA_u73AF_u8BED_u53E5" class="headerlink" title="7.循环语句"></a>7.循环语句</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@for $i from 1 to 10&#123;&#10;&#9;.border-#&#123;$i&#125;&#123;&#10;&#9;&#9;border:#&#123;$i&#125;px solid blue;&#16;&#16;&#16;&#10;&#9;&#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$i:6;&#10;@while $i&#62;0&#123;&#10;&#9;.item-#&#123;$i&#125;&#123;&#10;&#9;&#9;width:2em * $i;&#10;&#9;&#125;&#16;&#16;&#16;&#10;&#9;$i:$i-2;&#10;&#125;&#16;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//each&#21629;&#20196;&#10;//sass style&#10;//-------------------------------&#10;$animal-data: (puma, black, default),(sea-slug, blue, pointer),(egret, white, move);&#10;@each $animal, $color, $cursor in $animal-data &#123;&#10;  .#&#123;$animal&#125;-icon &#123;&#10;    background-image: url(&#39;/images/#&#123;$animal&#125;.png&#39;);&#10;    border: 2px solid $color;&#10;    cursor: $cursor;&#10;  &#125;&#10;&#125;&#10;&#10;//css style&#10;//-------------------------------&#10;.puma-icon &#123;&#10;  background-image: url(&#39;/images/puma.png&#39;);&#10;  border: 2px solid black;&#10;  cursor: default; &#10;&#125;&#10;.sea-slug-icon &#123;&#10;  background-image: url(&#39;/images/sea-slug.png&#39;);&#10;  border: 2px solid blue;&#10;  cursor: pointer; &#10;&#125;&#10;.egret-icon &#123;&#10;  background-image: url(&#39;/images/egret.png&#39;);&#10;  border: 2px solid white;&#10;  cursor: move; &#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-_u81EA_u5B9A_u4E49_u51FD_u6570"><a href="#8-_u81EA_u5B9A_u4E49_u51FD_u6570" class="headerlink" title="8.自定义函数"></a>8.自定义函数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@function double($n)&#123;&#10;&#9;@return $n * 2;&#10;&#125;&#10;#sidebar&#123;&#10;&#9;width:double(5px);&#16;&#10;&#125;&#16;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -265,7 +268,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Life/" rel="tag">#Life</a>
+            <a href="/tags/SASS/" rel="tag">#SASS</a>
           
         </div>
       
@@ -274,17 +277,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/26/记一次圣诞夜/" rel="next" title="记一次圣诞夜">
-                <i class="fa fa-chevron-left"></i> 记一次圣诞夜
+              <a href="/2016/01/29/css选择器整理/" rel="next" title="css选择器整理">
+                <i class="fa fa-chevron-left"></i> css选择器整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/09/前端程序员自我修养－sublime配置/" rel="prev" title="前端程序员自我修养－sublime配置">
-                前端程序员自我修养－sublime配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -311,8 +310,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/01/写于2016-01-01/"
-           data-title="写于2016-01-01" data-url="http://yoursite.com/2016/01/01/写于2016-01-01/">
+      <div class="ds-thread" data-thread-key="2016/02/02/SASS用法整理/"
+           data-title="SASS用法整理" data-url="http://yoursite.com/2016/02/02/SASS用法整理/">
       </div>
     
   </div>
@@ -428,7 +427,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u6211_u76842015"><span class="nav-number">1.</span> <span class="nav-text">我的2015</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2016_TODOLIST"><span class="nav-number">2.</span> <span class="nav-text">2016 TODOLIST</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_u7F16_u8BD1"><span class="nav-number">1.</span> <span class="nav-text">1.编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_u53D8_u91CF"><span class="nav-number">2.</span> <span class="nav-text">2.变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u5C5E_u6027_u5D4C_u5957"><span class="nav-number">3.</span> <span class="nav-text">3.属性嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_u7EE7_u627F"><span class="nav-number">4.</span> <span class="nav-text">4.继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Mixin"><span class="nav-number">5.</span> <span class="nav-text">5.Mixin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-_u6761_u4EF6_u8BED_u53E5"><span class="nav-number">6.</span> <span class="nav-text">6.条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-_u5FAA_u73AF_u8BED_u53E5"><span class="nav-number">7.</span> <span class="nav-text">7.循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-_u81EA_u5B9A_u4E49_u51FD_u6570"><span class="nav-number">8.</span> <span class="nav-text">8.自定义函数</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
