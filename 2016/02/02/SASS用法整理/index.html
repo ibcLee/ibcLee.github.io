@@ -61,7 +61,7 @@
 <meta property="og:site_name" content="ibcLee's home">
 <meta property="og:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。
 1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：">
-<meta property="og:updated_time" content="2016-02-02T09:32:26.000Z">
+<meta property="og:updated_time" content="2016-02-02T09:38:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SASS用法整理">
 <meta name="twitter:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。
@@ -249,6 +249,7 @@
       
         <span itemprop="articleBody"><p>SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。</p>
 <h3 id="1-_u7F16_u8BD1"><a href="#1-_u7F16_u8BD1" class="headerlink" title="1.编译"></a>1.编译</h3><p>作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：<br>&gt;<br>// watch a file<br>sass –watch input.scss:output.css<br>// watch a directory<br>sass –watch app/sass:public/stylesheets</p>
+<!--more-->
 <h3 id="2-_u53D8_u91CF"><a href="#2-_u53D8_u91CF" class="headerlink" title="2.变量"></a>2.变量</h3><p>变量可以镶嵌在字符串中，必须要写在#{}中</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$side: left;&#10;.rounded &#123;&#10;  border-#&#123;$side&#125;-radius: 5px;&#10;&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#22810;&#20540;&#21464;&#37327;&#10;$linkColor: #08c #333 !default;//&#31532;&#19968;&#20010;&#20540;&#20026;&#40664;&#35748;&#20540;&#65292;&#31532;&#20108;&#20010;&#40736;&#26631;&#28369;&#36807;&#20540;&#10;a&#123;&#10;  color:nth($linkColor,1);&#10;&#10;  &#38;:hover&#123;&#10;    color:nth($linkColor,2);&#10;  &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
