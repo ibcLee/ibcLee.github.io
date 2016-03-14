@@ -212,6 +212,99 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/14/javaScript高级程序设计－apply-call/" itemprop="url">
+                  javaScript高级程序设计－apply(),call()
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-03-14T11:37:22+08:00" content="2016-03-14">
+              2016-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/14/javaScript高级程序设计－apply-call/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/javaScript高级程序设计－apply-call/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>在javascript中，每个函数都包含两个非继承而来的方法：apply()和call()。这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。<br>apply()接收两个参数：一个是在其运行函数的作用域，另一个是参数数组。其中，第二个参数可以是Array的实例，也可以是anguments对象。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum1</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> sum.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum2</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> sum.apply(<span class="keyword">this</span>,[num1,num2]);</span><br><span class="line">&#125;</span><br><span class="line">alert(callSum1(<span class="number">10</span>,<span class="number">10</span>));  <span class="comment">//20</span></span><br><span class="line">alert(callSum2(<span class="number">10</span>,<span class="number">10</span>));  <span class="comment">//20</span></span><br></pre></td></tr></table></figure></p>
+<p>call()方法与apply()方法的作用相同，它们的区别仅存在于接收参数的方式不同。对于call()方法而言，第一个参数是this值没有变化，变化的是其余参数都是直接传递给函数。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSum</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> sum.call(<span class="keyword">this</span>,num1,num2);</span><br><span class="line">&#125;</span><br><span class="line">alert(callSum(<span class="number">10</span>,<span class="number">10</span>));  <span class="comment">//20</span></span><br></pre></td></tr></table></figure></p>
+<p>事实上apply()和call()真正强大的地方是能够扩充函数运行的作用域。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.color = <span class="string">"red"</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;color:<span class="string">"blue"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;</span><br><span class="line">sayColor();            <span class="comment">//red</span></span><br><span class="line">sayColor.call(<span class="keyword">this</span>);   <span class="comment">//red</span></span><br><span class="line">sayColor.call(<span class="built_in">window</span>); <span class="comment">//red</span></span><br><span class="line">sayColor.call(o);      <span class="comment">//blue</span></span><br></pre></td></tr></table></figure></p>
+<p>使用call()或apply()来扩充作用域最大的好处，就是对象不需要与方法有任何耦合关系。</p>
+<p>ECMAScript还定义了一个方法：bind()。这个方法会创建一个函数的实例，其this值会被绑定到传给bind()函数的值。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.color = <span class="string">"red"</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;color:<span class="string">"blue"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayColor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> objectSayColor = sayColor.bind(o);</span><br><span class="line">objectSayColor();      <span class="comment">//blue</span></span><br></pre></td></tr></table></figure></p>
+<p>IE8不支持bind()方法。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/07/javaScript高级程序设计－数组/" itemprop="url">
                   javaScript高级程序设计－数组
                 </a>
@@ -1006,99 +1099,14 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/22/文章题目/" itemprop="url">
-                  谈谈最近
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-22T21:17:34+08:00" content="2015-11-22">
-              2015-11-22
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/22/文章题目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/22/文章题目/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>博客搭好也已经半个多月了,一直想在这上面写点啥,也有点拖延症,有时间的时候只想躺着,今晚终于兴起了,随便聊聊最近,作为博客的第一篇文章,也不知道是想给谁看.</p>
-<p>最近啊,也经历了不少,从九月份被辞,而且无家可归,寄居在同学家窗台,好在找到了一份自己很满意的工作,而且也刚刚搬进了新的小窝,下周也转正了,但是还是感觉挺累的,不是工作上,也肯定是闲的时间太多,想的太多.工作不是很累,作为一名刚毕业的学生进入一家创业公司,我现在应该也已经算是在享受了,看着同学经常都是加班到深夜,感觉我现在像是在虚度时光,很怕几年不上进在北京混不下去,唉~~<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/22/文章题目/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
         </div>
@@ -1137,7 +1145,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
