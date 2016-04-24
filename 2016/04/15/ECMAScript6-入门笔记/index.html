@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="SASS," />
+  <meta name="keywords" content="ECMAScript6," />
 
 
 
@@ -53,19 +53,22 @@
 
 
 
-<meta name="description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。&amp;lt;!-- more --&amp;gt;
-1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之">
+<meta name="description" content="看阮一峰巨巨的ECMScript6入门，主要记录ECMAScript6的常用语法，按章节目录，看到哪记到哪。
+let命令声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。123456｛	let a = 10;	var b = 1; ｝ a // ReferenceError: a is not defined. b // 1
+for循环计数器1234for(let i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SASS用法整理">
-<meta property="og:url" content="http://yoursite.com/2016/02/02/SASS用法整理/index.html">
+<meta property="og:title" content="ECMAScript6 入门笔记">
+<meta property="og:url" content="http://yoursite.com/2016/04/15/ECMAScript6-入门笔记/index.html">
 <meta property="og:site_name" content="ibcLee's home">
-<meta property="og:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。&amp;lt;!-- more --&amp;gt;
-1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之">
-<meta property="og:updated_time" content="2016-03-07T05:11:25.000Z">
+<meta property="og:description" content="看阮一峰巨巨的ECMScript6入门，主要记录ECMAScript6的常用语法，按章节目录，看到哪记到哪。
+let命令声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。123456｛	let a = 10;	var b = 1; ｝ a // ReferenceError: a is not defined. b // 1
+for循环计数器1234for(let i">
+<meta property="og:updated_time" content="2016-04-15T08:42:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SASS用法整理">
-<meta name="twitter:description" content="SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。&amp;lt;!-- more --&amp;gt;
-1.编译作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之">
+<meta name="twitter:title" content="ECMAScript6 入门笔记">
+<meta name="twitter:description" content="看阮一峰巨巨的ECMScript6入门，主要记录ECMAScript6的常用语法，按章节目录，看到哪记到哪。
+let命令声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。123456｛	let a = 10;	var b = 1; ｝ a // ReferenceError: a is not defined. b // 1
+for循环计数器1234for(let i">
 
 
 
@@ -77,7 +80,7 @@
   };
 </script>
 
-  <title> SASS用法整理 | ibcLee's home </title>
+  <title> ECMAScript6 入门笔记 | ibcLee's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -207,7 +210,7 @@
             
             
               
-                SASS用法整理
+                ECMAScript6 入门笔记
               
             
           </h1>
@@ -216,8 +219,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-02T11:08:48+08:00" content="2016-02-02">
-              2016-02-02
+            <time itemprop="dateCreated" datetime="2016-04-15T16:09:58+08:00" content="2016-04-15">
+              2016-04-15
             </time>
           </span>
 
@@ -227,8 +230,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/02/SASS用法整理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/02/SASS用法整理/" itemprop="commentsCount"></span>
+                <a href="/2016/04/15/ECMAScript6-入门笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/ECMAScript6-入门笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -247,22 +250,20 @@
       
 
       
-        <span itemprop="articleBody"><p>SASS作为CSS预处理器，在最近的开发中经常使用，但是大多数的时候也只是用到其中的嵌套和变量，对于其他的一些方法都很少用到，这次主要是把SASS的所有用法过一遍，在日后的开发中很会省很多事，更何况SASS的学习成本很低，没有特别难理解的地方，记住就会用了。简单的一些用法就不再提了。<br><!-- more --></p>
-<h3 id="1-_u7F16_u8BD1"><a href="#1-_u7F16_u8BD1" class="headerlink" title="1.编译"></a>1.编译</h3><p>作为前端，放在本地开发的时候，经常会先对SASS文件进行编译，在引入编译之后的CSS文件，监听并编译方法：</p>
-<blockquote>
-<p>// watch a file<br>sass –watch input.scss:output.css<br>// watch a directory<br>sass –watch app/sass:public/stylesheets</p>
-</blockquote>
-<h3 id="2-_u53D8_u91CF"><a href="#2-_u53D8_u91CF" class="headerlink" title="2.变量"></a>2.变量</h3><p>变量可以镶嵌在字符串中，必须要写在#{}中</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$side: left;&#10;.rounded &#123;&#10;  border-#&#123;$side&#125;-radius: 5px;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#22810;&#20540;&#21464;&#37327;&#10;$linkColor: #08c #333 !default;//&#31532;&#19968;&#20010;&#20540;&#20026;&#40664;&#35748;&#20540;&#65292;&#31532;&#20108;&#20010;&#40736;&#26631;&#28369;&#36807;&#20540;&#10;a&#123;&#10;  color:nth($linkColor,1);&#10;&#10;  &#38;:hover&#123;&#10;    color:nth($linkColor,2);&#10;  &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-_u5C5E_u6027_u5D4C_u5957"><a href="#3-_u5C5E_u6027_u5D4C_u5957" class="headerlink" title="3.属性嵌套"></a>3.属性嵌套</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//sass style&#10;//-------------------------------&#10;.fakeshadow &#123;&#10;  border: &#123;&#10;    style: solid;&#10;    left: &#123;&#10;      width: 4px;&#10;      color: #888;&#10;    &#125;&#10;    right: &#123;&#10;      width: 2px;&#10;      color: #ccc;&#10;    &#125;&#10;  &#125;&#10;&#125;&#10;&#10;//css style&#10;//-------------------------------&#10;.fakeshadow &#123;&#10;  border-style: solid;&#10;  border-left-width: 4px;&#10;  border-left-color: #888;&#10;  border-right-width: 2px;&#10;  border-right-color: #ccc; &#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4-_u7EE7_u627F"><a href="#4-_u7EE7_u627F" class="headerlink" title="4.继承"></a>4.继承</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//class2&#32487;&#25215;class1&#10;.class1 &#123;&#10;&#12288;&#9;border: 1px solid #ddd;&#10;&#125;&#10;.class2 &#123;&#10;&#12288; @extend .class1;&#10;&#12288; font-size:120%;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5-Mixin"><a href="#5-Mixin" class="headerlink" title="5.Mixin"></a>5.Mixin</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#23450;&#20041;&#20195;&#30721;&#22359;&#10;@mixin left($value:10px)&#123;&#10;&#9;float:left;&#10;&#9;margin-left:$value;&#10;&#125;&#10;div&#123;&#10;&#9;@include left(20px);&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6-_u6761_u4EF6_u8BED_u53E5"><a href="#6-_u6761_u4EF6_u8BED_u53E5" class="headerlink" title="6.条件语句"></a>6.条件语句</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p&#123;&#10;&#9;@if 1+1==2&#10;&#9;&#9;&#123;border:1px solid;&#125;&#10;&#9;@if 5&#60;3&#10;&#9;&#9;&#123;border:2px dotted&#125;&#10;&#9;@if lightness($color)&#62;30%&#123;&#10;&#9;&#9;background-color:#000;&#16;&#16;&#10;&#9;&#125;@else&#123;&#10;&#9;&#9;abckground-color:#fff;&#16;&#16;&#10;&#9;&#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7-_u5FAA_u73AF_u8BED_u53E5"><a href="#7-_u5FAA_u73AF_u8BED_u53E5" class="headerlink" title="7.循环语句"></a>7.循环语句</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@for $i from 1 to 10&#123;&#10;&#9;.border-#&#123;$i&#125;&#123;&#10;&#9;&#9;border:#&#123;$i&#125;px solid blue;&#16;&#16;&#16;&#10;&#9;&#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$i:6;&#10;@while $i&#62;0&#123;&#10;&#9;.item-#&#123;$i&#125;&#123;&#10;&#9;&#9;width:2em * $i;&#10;&#9;&#125;&#16;&#16;&#16;&#10;&#9;$i:$i-2;&#10;&#125;&#16;</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//each&#21629;&#20196;&#10;//sass style&#10;//-------------------------------&#10;$animal-data: (puma, black, default),(sea-slug, blue, pointer),(egret, white, move);&#10;@each $animal, $color, $cursor in $animal-data &#123;&#10;  .#&#123;$animal&#125;-icon &#123;&#10;    background-image: url(&#39;/images/#&#123;$animal&#125;.png&#39;);&#10;    border: 2px solid $color;&#10;    cursor: $cursor;&#10;  &#125;&#10;&#125;&#10;&#10;//css style&#10;//-------------------------------&#10;.puma-icon &#123;&#10;  background-image: url(&#39;/images/puma.png&#39;);&#10;  border: 2px solid black;&#10;  cursor: default; &#10;&#125;&#10;.sea-slug-icon &#123;&#10;  background-image: url(&#39;/images/sea-slug.png&#39;);&#10;  border: 2px solid blue;&#10;  cursor: pointer; &#10;&#125;&#10;.egret-icon &#123;&#10;  background-image: url(&#39;/images/egret.png&#39;);&#10;  border: 2px solid white;&#10;  cursor: move; &#10;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8-_u81EA_u5B9A_u4E49_u51FD_u6570"><a href="#8-_u81EA_u5B9A_u4E49_u51FD_u6570" class="headerlink" title="8.自定义函数"></a>8.自定义函数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@function double($n)&#123;&#10;&#9;@return $n * 2;&#10;&#125;&#10;#sidebar&#123;&#10;&#9;width:double(5px);&#16;&#10;&#125;&#16;</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>看阮一峰巨巨的ECMScript6入门，主要记录ECMAScript6的常用语法，按章节目录，看到哪记到哪。</p>
+<h3 id="let_u547D_u4EE4"><a href="#let_u547D_u4EE4" class="headerlink" title="let命令"></a>let命令</h3><p>声明变量，用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">｛</span><br><span class="line">	<span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line"> ｝</span><br><span class="line"> a <span class="comment">// ReferenceError: a is not defined.</span></span><br><span class="line"> b <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></p>
+<p>for循环计数器<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(i)</span><br><span class="line"><span class="comment">//ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure></p>
+<p>let不像var那样会发生“变量提升”现象。所以，变量一定要在声明后使用，否则报错。</p>
+<p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。</p>
+<h3 id="const_u547D_u4EE4"><a href="#const_u547D_u4EE4" class="headerlink" title="const命令"></a>const命令</h3><p>const也用来声明变量，但是声明的是常量。一旦声明，常量的值就不能改变。</p>
+<p>const的作用域与let命令相同：只在声明所在的块级作用域内有效。</p>
+<p>const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。</p>
+<h3 id="u53D8_u91CF_u7684_u89E3_u6784_u8D4B_u503C"><a href="#u53D8_u91CF_u7684_u89E3_u6784_u8D4B_u503C" class="headerlink" title="变量的解构赋值"></a>变量的解构赋值</h3><p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> [foo, [[bar], baz]] = [<span class="number">1</span>, [[<span class="number">2</span>], <span class="number">3</span>]];</span><br><span class="line">foo <span class="comment">// 1</span></span><br><span class="line">bar <span class="comment">// 2</span></span><br><span class="line">baz <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [ , , third] = [<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>];</span><br><span class="line">third <span class="comment">// "baz"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, , y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">x <span class="comment">// 1</span></span><br><span class="line">y <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [head, ...tail] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">head <span class="comment">// 1</span></span><br><span class="line">tail <span class="comment">// [2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, y, ...z] = [<span class="string">'a'</span>];</span><br><span class="line">x <span class="comment">// "a"</span></span><br><span class="line">y <span class="comment">// undefined</span></span><br><span class="line">z <span class="comment">// []</span></span><br></pre></td></tr></table></figure></p>
+<p>如果解构不成功，变量的值就等于undefined。</p>
+<p>另一种情况是不完全解构，即等号左边的模式，只匹配一部分的等号右边的数组。这种情况下，解构依然可以成功。</p>
+<p>解构赋值不仅适用于var命令，也适用于let和const命令。</p>
+<p>解构赋值允许指定默认值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [foo = <span class="literal">true</span>] = [];</span><br><span class="line">foo <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">[x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>] <span class="comment">// x='a', y='b'</span></span><br><span class="line">[x, y = <span class="string">'b'</span>] = [<span class="string">'a'</span>, <span class="literal">undefined</span>] <span class="comment">// x='a', y='b'</span></span><br></pre></td></tr></table></figure></p>
+<p>解构不仅可以用于数组，还可以用于对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123; foo, bar &#125; = &#123; foo: <span class="string">"aaa"</span>, bar: <span class="string">"bbb"</span> &#125;;</span><br><span class="line">foo <span class="comment">// "aaa"</span></span><br><span class="line">bar <span class="comment">// "bbb"</span></span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -271,7 +272,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SASS/" rel="tag">#SASS</a>
+            <a href="/tags/ECMAScript6/" rel="tag">#ECMAScript6</a>
           
         </div>
       
@@ -280,16 +281,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/29/css选择器整理/" rel="next" title="css选择器整理">
-                <i class="fa fa-chevron-left"></i> css选择器整理
+              <a href="/2016/04/15/Web移动端Fixed布局的解决方案/" rel="next" title="Web移动端Fixed布局的解决方案">
+                <i class="fa fa-chevron-left"></i> Web移动端Fixed布局的解决方案
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/07/javaScript高级程序设计－数组/" rel="prev" title="javaScript高级程序设计－数组">
-                javaScript高级程序设计－数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/23/网易微专业课程笔记－页面制作/" rel="prev" title="网易微专业课程笔记－页面制作">
+                网易微专业课程笔记－页面制作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -317,8 +318,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/02/SASS用法整理/"
-           data-title="SASS用法整理" data-url="http://yoursite.com/2016/02/02/SASS用法整理/">
+      <div class="ds-thread" data-thread-key="2016/04/15/ECMAScript6-入门笔记/"
+           data-title="ECMAScript6 入门笔记" data-url="http://yoursite.com/2016/04/15/ECMAScript6-入门笔记/">
       </div>
     
   </div>
@@ -434,7 +435,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_u7F16_u8BD1"><span class="nav-number">1.</span> <span class="nav-text">1.编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_u53D8_u91CF"><span class="nav-number">2.</span> <span class="nav-text">2.变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u5C5E_u6027_u5D4C_u5957"><span class="nav-number">3.</span> <span class="nav-text">3.属性嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_u7EE7_u627F"><span class="nav-number">4.</span> <span class="nav-text">4.继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Mixin"><span class="nav-number">5.</span> <span class="nav-text">5.Mixin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-_u6761_u4EF6_u8BED_u53E5"><span class="nav-number">6.</span> <span class="nav-text">6.条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-_u5FAA_u73AF_u8BED_u53E5"><span class="nav-number">7.</span> <span class="nav-text">7.循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-_u81EA_u5B9A_u4E49_u51FD_u6570"><span class="nav-number">8.</span> <span class="nav-text">8.自定义函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#let_u547D_u4EE4"><span class="nav-number">1.</span> <span class="nav-text">let命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const_u547D_u4EE4"><span class="nav-number">2.</span> <span class="nav-text">const命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53D8_u91CF_u7684_u89E3_u6784_u8D4B_u503C"><span class="nav-number">3.</span> <span class="nav-text">变量的解构赋值</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
