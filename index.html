@@ -257,7 +257,7 @@
         
           <span itemprop="articleBody">
             
-              <p>前段时间报名了网易微专业课程，报名之前也考虑了很久，毕竟工作也快一年了，虽然技术还是很low但是要不要从头学起呢？进入前端领域一直是在自学，从切图开始，半吊子水平，没有个正确的姿势，也没有人指导是不是正确，反正最后能得到结果就行，比如css，对很多属性还不是很了解，但是一直在开发中没有用到，也没有仔细的去了解，反正最后样式是写出来了，一个属性可以搞定的事用了一堆hack，从基础过一遍，查缺补漏总是有好处的，不看不知道，一看还真有很多自己不知道的技能，从现在开始，对每一节的课程做个记录，这次是页面制作部分，包括从最开始的photoshop切图到html到css。</p>
+              <p>前段时间报名了网易微专业课程，报名之前也考虑了很久，毕竟工作也快一年了，虽然技术还是很low但是要不要从头学起呢？进入前端领域一直是在自学，从切图开始，半吊子水平，没有个正确的姿势，也没有人指导是不是正确，反正最后能得到结果就行，比如css，对很多属性还不是很了解，但是一直在开发中没有用到，也没有仔细的去了解，反正最后样式是写出来了，一个属性可以搞定的事用了一堆hack，从基础过一遍，查缺补漏总是有好处的，不看不知道，一看还真有很多自己不知道的技能，从现在开始，对每一节的课程做个记录，这次是页面制作部分，包括从最开始的<code>photoshop</code>切图到<code>html</code>到<code>css</code>。</p>
 <h2 id="photoshop_u5207_u56FE"><a href="#photoshop_u5207_u56FE" class="headerlink" title="photoshop切图"></a>photoshop切图</h2><ul>
 <li>当文字是独立图层时，文字工具选中文字涂层，在属性面板里会有字号和行高的信息；如果不是单独涂层，行高可用矩形选框工具从第一行的下部到第二行的下部。</li>
 <li>shift＋矩形选框工具＝添加到选区；<br>  Alt＋矩形选框工具＝减去选区；<br>  Alt＋Shift＋矩形选框工具＝选取交叉区域。</li>
@@ -269,7 +269,7 @@
 <li>保存图片为PNG24格式时，可以右键复制图层到新文件中，不在一个图层时需要先复制图层；保存PNG8时，因为不支持半透明，所以我们需要带着背景去切图，首先要合并可见图层，再用矩形选框工具选择所需要的区域，再用魔棒工具去除多余的部分，使用魔棒工具时按住Alt键，从选区中减去，再把选区拖动到新文件中。</li>
 <li>保存JPG格式时，可以将品质减小一点，品质不要设置100；<br>保存PNG8格式时，将杂边设置为无，扩散设置为无仿色；<br>保存PNG24格式时，默认设置就可以；<br>将切出的图片保留一份PSD。</li>
 <li>在PNG8格式的图片上更改颜色，需要将默认的索引颜色模式改为RGB颜色模式。</li>
-<li>图片压缩工具 <br><br>  无损：Minimage <br><br>  有损：TinyPng</li>
+<li>图片压缩工具 <br><br>  无损：[Minimage]<a href="https://github.com/NetEaseWD/minimage" target="_blank" rel="external">https://github.com/NetEaseWD/minimage</a> <br><br>  有损：[TinyPng]<a href="https://github.com/xing/TinyPNG" target="_blank" rel="external">https://github.com/xing/TinyPNG</a></li>
 </ul>
 <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>只是讲了一些标签的语义化和实体字符，非常基础，这里就不再写了…</p>
 <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="u6587_u672C"><a href="#u6587_u672C" class="headerlink" title="文本"></a>文本</h3><p>首先是讲了一些css选择器的用法，之前的文章有总结，这里就不再记录了。</p>
@@ -277,16 +277,18 @@
 <li>font-size的单位设置为em和百分比都是相对于父元素来说的。</li>
 <li>font-style:normal|italic|oblique ,italic是使用当前字体样式的斜体，oblique是将文字强制倾斜。</li>
 <li>line-height的单位设置为em和百分比、数值是相对于当前的字体大小，但是设置数值的时候，子元素的继承是直接继承，百分比是先计算，再继承，也就是当子元素的字体大小改变时，设置行高单位数值的时候，继承的行高是先对于改动后的字体大小＊数值，而百分比是不会再进行计算的。</li>
-<li>行高和字体缩写<br>    font:30px/2,arial,serif;   这时行高为2</li>
+<li>行高和字体缩写  <code>font:30px/2,arial,serif</code>;   这时行高为2</li>
 <li>设置font时，字体大小和字体样式是必选项。如font：12px;这时font是不起作用的，因为没有指定font-family。</li>
-<li>text-align:left|right|center|justify.</li>
-<li>vertical-align:baseline|sub|super|top|text-top|middle|bottom|text-bottom|<percentage>|<length>.属性值为具体像素值时，是相对于基线的偏移度。</length></percentage></li>
-<li>text-indent:<length>|<percentage>.百分比是相对于容器宽度；设置极大的负值时，可以达到隐藏文字的目的。</percentage></length></li>
-<li>white-space:normal<br>    |nowrap（强制不换行）<br>|pre（保留换行、空格、ab，不自动换行，完整保留代码的格式）<br>|pre-wrap（保留换行、空格、tab，允许自动换行）<br>|pre-line（只保留换行，可以自动换行）。</li>
-<li>word-wrap:normal|break-word(长单词允许自动换行)。</li>
-<li>word-break:normal|keep-all|break-all(单词任意两个字母之间都可以换行)。</li>
+<li><code>text-align:left|right|center|justify.</code></li>
+<li><code>vertical-align:baseline|sub|super|top|text-top|middle|bottom|text-bottom|&lt;percentage&gt;|&lt;length&gt;</code>.属性值为具体像素值时，是相对于基线的偏移度。</li>
+<li><code>text-indent:&lt;length&gt;|&lt;percentage&gt;</code>.百分比是相对于容器宽度；设置极大的负值时，可以达到隐藏文字的目的。</li>
+<li><code>white-space</code>:<code>normal</code>|<code>nowrap</code>（强制不换行）|<code>pre</code>（保留换行、空格、ab，不自动换行，完整保留代码的格式）|<code>pre-wrap</code>（保留换行、空格、tab，允许自动换行）|<code>pre-line</code>（只保留换行，可以自动换行）。</li>
+<li><code>word-wrap:normal|break-word</code>(长单词允许自动换行)。</li>
+<li><code>word-break:normal|keep-all|break-all</code>(单词任意两个字母之间都可以换行)。</li>
 <li>text-shadow:none|[<length>{2,3}&amp;&amp;<color>?]#;x轴偏移量，y轴偏移量，模糊半径，不设置颜色时默认文字颜色。</color></length></li>
-<li>text-decoration:none|[underline||overline||line-through],可以写多个。<h3 id="u76D2_u6A21_u578B"><a href="#u76D2_u6A21_u578B" class="headerlink" title="盒模型"></a>盒模型</h3></li>
+<li><code>text-decoration:none|[underline||overline||line-through]</code>,可以写多个。</li>
+</ul>
+<h3 id="u76D2_u6A21_u578B"><a href="#u76D2_u6A21_u578B" class="headerlink" title="盒模型"></a>盒模型</h3><ul>
 <li>相邻元素外边距会合并。</li>
 <li>border-style:[soli|dashed|dotted|…]{1,4}|inherit.</li>
 <li>border-radius:[<length>|<percentage>]{1,4}[/[<length>|<percentage>]{1,4}]?.border-radius:0px 5px 20px 15px/20px 15px 10px 5px;</percentage></length></percentage></length></li>
@@ -294,24 +296,25 @@
 <li>box-sizing: content-box|border-box|inherit;</li>
 <li>box-shadow: none|<shadow>[,<shadow>]*;<shadow>:inset?&amp;&amp;<length>{2,4}&amp;&amp;<color>?</color></length></shadow></shadow></shadow></li>
 <li>box-shadow:inset 4px(水平偏移) 6px(垂直偏移) 3px(模糊半径) 0px(阴影大小) red.</li>
-<li>box-shadow:inset 4px 3px 2px 3px blue,3px 3px 4px red.阴影不占空间</li>
+<li>box-shadow:inset 4px 3px 2px 3px blue,insert 3px 3px 4px red.同时设置内阴影和外阴影，阴影不占空间</li>
 <li>outline语法和border一样，outline不占空间。</li>
 </ul>
 <h3 id="u80CC_u666F"><a href="#u80CC_u666F" class="headerlink" title="背景"></a>背景</h3><ul>
-<li>background-img:url(red.png),url(blue.png);可以引入多张图片，先引入的在上层，颜色在最后一层。</li>
-<li>background-repeat:repeat-x|repeat-y[repeat|space(平铺保留空隙，空隙根据容器正好展示平铺图片)|round|no-repeat]{1,2}。</li>
-<li>background-attachment:scroll(背景不动)|fixed|local(背景随滚动条滚动).</li>
-<li>background-position的百分比是容器的百分比和背景图片的百分比的重合位置。</li>
-<li>background-position:right 20px top 10px.</li>
-<li>linear-gradient(to top,red,blue||to right bottom, red,blue||45deg,red,blue||red,green 20%,blue).</li>
-<li>radial-gradient(close-side,red,blue||circle,red,blue||circle 100px,red,blue||red,blue|| 100px 50px at 0 0,red,blue).</li>
-<li>repeating-linear(radial)-gradient.</li>
-<li>background-origin:borde-box|padding-box|content-box;背景覆盖盒子容器区域起始位置。</li>
-<li>background-clip:border-box|padding-box|content-box。</li>
-<li>background-size属性值为百分比时是相对容器的大小。</li>
-<li>background缩写时，position/size。</li>
+<li><code>background-img:url(red.png),url(blue.png);</code>可以引入多张图片，先引入的在上层，如果有设置背景颜色的话，背景颜色在最后一层。</li>
+<li><code>background-repeat:repeat-x|repeat-y[repeat|space</code>(平铺保留空隙，空隙根据容器正好展示平铺图片)<code>|round|no-repeat]{1,2}</code>。</li>
+<li><code>background-attachment:scroll</code>(背景不动)<code>|fixed</code>(很少用到，背景相对于窗口固定，与元素没有关系)<code>|local</code>(背景随滚动条滚动).</li>
+<li><code>background-position</code>的百分比是容器的百分比和背景图片的百分比的重合位置。</li>
+<li><code>background-position:right 20px top 10px.</code>()</li>
+<li><code>linear-gradient(to top,red,blue||to right bottom, red,blue||45deg,red,blue||red,green 20%,blue).</code></li>
+<li><code>radial-gradient(close-side,red,blue||circle,red,blue||circle 100px,red,blue||red,blue|| 100px 50px at 0 0,red,blue).</code></li>
+<li><code>repeating-linear(radial)-gradient.</code></li>
+<li><code>background-origin:borde-box|padding-box|content-box;</code>背景覆盖盒子容器区域起始位置。</li>
+<li><code>background-clip:border-box|padding-box|content-box。</code>规定背景的绘制区域</li>
+<li><code>background-size</code>属性值为百分比时是相对容器的大小。</li>
+<li><code>background</code>缩写时，<code>position/size。</code></li>
 </ul>
-<h3 id="u5E03_u5C40"><a href="#u5E03_u5C40" class="headerlink" title="布局"></a>布局</h3><h3 id="u53D8_u5F62"><a href="#u53D8_u5F62" class="headerlink" title="变形"></a>变形</h3><h3 id="u52A8_u753B"><a href="#u52A8_u753B" class="headerlink" title="动画"></a>动画</h3>
+<h3 id="u5E03_u5C40"><a href="#u5E03_u5C40" class="headerlink" title="布局"></a>布局</h3><h3 id="u53D8_u5F62"><a href="#u53D8_u5F62" class="headerlink" title="变形"></a>变形</h3><h3 id="u52A8_u753B"><a href="#u52A8_u753B" class="headerlink" title="动画"></a>动画</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">•	animation-name: none||&lt;single-animation-name&gt;#       //自定义动画名字</span><br><span class="line">•	animation-duration: 0s||&lt;time&gt;#     //持续时间</span><br><span class="line">•	animation-timing-function: ease     //运动时间函数</span><br><span class="line">•	animation-delay: 0s    //延迟时间</span><br><span class="line">•	animation-iteration-count: 1   //动画重复次数</span><br><span class="line">•	animation-direction: normal||reverse||alternate||alternate-reverse      //是否轮流反向播放动画</span><br><span class="line">•	animation-fill-mode: none||forwards||backwards||both   //是否维持在动画开始或结束状态</span><br><span class="line">•	animation-play-state: running||paused         //动画的播放与暂停</span><br></pre></td></tr></table></figure>
+
             
           </span>
         
