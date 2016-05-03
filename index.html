@@ -212,6 +212,139 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/03/网易微专业课程笔记－正则表达式/" itemprop="url">
+                  网易微专业课程笔记－正则表达式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-05-03T13:35:18+08:00" content="2016-05-03">
+              2016-05-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/03/网易微专业课程笔记－正则表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/网易微专业课程笔记－正则表达式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>正则表达式有两种定义方法：</p>
+<blockquote>
+<p>/pattern/attrs<br>new RegExp(pattern,attrs)</p>
+</blockquote>
+<p>判断是否匹配正则表达式：</p>
+<blockquote>
+<p>regexObj.text(str)  //返回布尔值</p>
+</blockquote>
+<p>匹配一个位置</p>
+<blockquote>
+<p>^ : 匹配起始位置    /^http:/<br>$ : 匹配结尾位置    /.jpg$/<br>\b : 匹配单词边界   </p>
+</blockquote>
+<p>字符类匹配</p>
+<blockquote>
+<p>匹配一类字符中的一个<br>[abc] : a或b或c<br>[0-9] : 匹配0到9的数字<br>[^ 0-9] : 非数字    （^ 在字符类匹配中表示非）<br>[a-z] : 匹配一个字母<br>. : 匹配任意字符</p>
+</blockquote>
+<p>元字符（具有特殊意义的字符）</p>
+<blockquote>
+<p>\d : [0-9] 表示任意数字<br>\s : 空白字符<br>\w : [A-Za-z0-9_]  任意一个字母或数字或下划线<br>\S : 匹配所有非空字符<br>\D : 匹配所有非数字字符<br>\W : 匹配所有的字母、数字、下划线以外的字符<br>\B : 匹配非单词边界</p>
+</blockquote>
+<p>量词</p>
+<blockquote>
+<p>{m,n} : 表达式重复m到n次</p>
+<ul>
+<li>: {0,} 表达式不出现或出现任意次<br>? : {0,1} 匹配表达式0次或者1次</li>
+</ul>
+<ul>
+<li>: {1,} 至少出现一次 </li>
+</ul>
+</blockquote>
+<p>转义字符</p>
+<blockquote>
+<p>\ : 进行转义<br>\r,\n : 表示回车或者换行符<br>\t : 制表符</p>
+</blockquote>
+<p>多选分支</p>
+<blockquote>
+<p>| : 左右两边表达式之间 “或” 关系，匹配左边或者右边</p>
+</blockquote>
+<p>捕获</p>
+<blockquote>
+<p>保存匹配到的字符串，日后使用（调用：$1,$2 …）<br>( ) : 1. 在被修饰匹配次数的时候，括号中的表达式可以作为整体被修饰;2. 取匹配结果的时候，括号中的表达式匹配到的内容可以被单独得到<br>(?:) : 不捕获</p>
+</blockquote>
+<p>str.match(regexp) : 获取匹配的字符串<br>str.replace(regexp) : 匹配替换 </p>
+<blockquote>
+<p>str.replace(/(\d+)/g,’$1.00’)  //匹配所有数字，后面加.00<br></p>
+</blockquote>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/23/网易微专业课程笔记－页面制作/" itemprop="url">
                   网易微专业课程笔记－页面制作
                 </a>
@@ -1118,95 +1251,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/26/记一次圣诞夜/" itemprop="url">
-                  记一次圣诞夜
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-26T14:37:22+08:00" content="2015-12-26">
-              2015-12-26
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/26/记一次圣诞夜/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/26/记一次圣诞夜/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>昨天是圣诞节,也是步入职场之后在公司过的第一个节日,浓厚的节日气氛,很值得纪念一下,哈哈哈!过圣诞节,我再也不是一个人啦</p>
-<p>提早一个星期,公司就决定让广大的单身程序员圣诞节不再孤单,于圣诞节当天在公司举办创投圈首次圣诞party,昨天下午,准备工作开始.<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/26/记一次圣诞夜/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1253,7 +1297,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

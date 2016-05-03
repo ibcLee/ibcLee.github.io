@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="web前端," />
+  <meta name="keywords" content="笔记 微专业," />
 
 
 
@@ -53,16 +53,58 @@
 
 
 
-<meta name="description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
+<meta name="description" content="正则表达式有两种定义方法：
+
+/pattern/attrsnew RegExp(pattern,attrs)
+
+判断是否匹配正则表达式：
+
+regexObj.text(str)  //返回布尔值
+
+匹配一个位置
+
+^ : 匹配起始位置    /^http:/$ : 匹配结尾位置    /.jpg$/\b : 匹配单词边界   
+
+字符类匹配
+
+匹配一类字符中的一个[abc] : a或b或c[0-9">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多行文本溢出显示省略号...">
-<meta property="og:url" content="http://yoursite.com/2015/12/14/多行文本溢出显示省略号/index.html">
+<meta property="og:title" content="网易微专业课程笔记－正则表达式">
+<meta property="og:url" content="http://yoursite.com/2016/05/03/网易微专业课程笔记－正则表达式/index.html">
 <meta property="og:site_name" content="ibcLee's home">
-<meta property="og:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
-<meta property="og:updated_time" content="2016-01-19T02:45:50.000Z">
+<meta property="og:description" content="正则表达式有两种定义方法：
+
+/pattern/attrsnew RegExp(pattern,attrs)
+
+判断是否匹配正则表达式：
+
+regexObj.text(str)  //返回布尔值
+
+匹配一个位置
+
+^ : 匹配起始位置    /^http:/$ : 匹配结尾位置    /.jpg$/\b : 匹配单词边界   
+
+字符类匹配
+
+匹配一类字符中的一个[abc] : a或b或c[0-9">
+<meta property="og:updated_time" content="2016-05-03T06:09:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多行文本溢出显示省略号...">
-<meta name="twitter:description" content="单行文本溢出显示省略号的方法很容易实现12345.text&amp;#123;  overflow: hidden;  text-overflow:ellipsis;  white-space: nowrap;&amp;#125;">
+<meta name="twitter:title" content="网易微专业课程笔记－正则表达式">
+<meta name="twitter:description" content="正则表达式有两种定义方法：
+
+/pattern/attrsnew RegExp(pattern,attrs)
+
+判断是否匹配正则表达式：
+
+regexObj.text(str)  //返回布尔值
+
+匹配一个位置
+
+^ : 匹配起始位置    /^http:/$ : 匹配结尾位置    /.jpg$/\b : 匹配单词边界   
+
+字符类匹配
+
+匹配一类字符中的一个[abc] : a或b或c[0-9">
 
 
 
@@ -74,7 +116,7 @@
   };
 </script>
 
-  <title> 多行文本溢出显示省略号... | ibcLee's home </title>
+  <title> 网易微专业课程笔记－正则表达式 | ibcLee's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -204,7 +246,7 @@
             
             
               
-                多行文本溢出显示省略号...
+                网易微专业课程笔记－正则表达式
               
             
           </h1>
@@ -213,8 +255,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-14T11:34:17+08:00" content="2015-12-14">
-              2015-12-14
+            <time itemprop="dateCreated" datetime="2016-05-03T13:35:18+08:00" content="2016-05-03">
+              2016-05-03
             </time>
           </span>
 
@@ -224,8 +266,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/14/多行文本溢出显示省略号/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/多行文本溢出显示省略号/" itemprop="commentsCount"></span>
+                <a href="/2016/05/03/网易微专业课程笔记－正则表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/网易微专业课程笔记－正则表达式/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -244,14 +286,52 @@
       
 
       
-        <span itemprop="articleBody"><p>单行文本溢出显示省略号的方法很容易实现<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value">ellipsis</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>但是如果需要实现多行文本的溢出用这种方式是不能实现的,而最近的工作中也有很多地方需要实现这种多行文本的溢出,看了很多文章,下面总结一下多行文本溢出的实现方法.</p>
-<h3 id="webkit-line-clamp"><a href="#webkit-line-clamp" class="headerlink" title="-webkit-line-clamp"></a>-webkit-line-clamp</h3><p>webkit内核的浏览器支持一种叫-webkit-line-clamp的属性,但这个属性并不是标准的一部分.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.text&#123;</span><br><span class="line">  display: -webkit-box; //必须结合的属性,将对象作为弹性的伸缩盒子模型显示</span><br><span class="line">  overflow : hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  -webkit-line-clamp: 2; //用来限制一个块元素显示的文本的行数</span><br><span class="line">  -webkit-box-orient: vertical; //必须结合的属性,设置或检索伸缩和对象的子元素的排列方式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="o-ellipsis-lastline"><a href="#o-ellipsis-lastline" class="headerlink" title="-o-ellipsis-lastline"></a>-o-ellipsis-lastline</h3><p>从Opera10.60开始,text-overflow新增加一个叫-oo-ellipsis-lastline的值,意思是在文本的最后一行加上省略号,但同样不在标准内.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.text</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> normal</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">3em</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> -o-ellipsis-lastline</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><p>通过js从后向前逐个删除末尾的字符,直至元素的高度小于父元素的高度,并在末尾加上…<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">".figcaption"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> divH = $(<span class="keyword">this</span>).height();</span><br><span class="line">    <span class="keyword">var</span> $p = $(<span class="string">"p"</span>, $(<span class="keyword">this</span>)).eq(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span> ($p.outerHeight() &gt; divH) &#123;</span><br><span class="line">        $p.text($p.text().replace(<span class="regexp">/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/</span>, <span class="string">"..."</span>));</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="jQuery_u63D2_u4EF6_28dotdotdot-js_29"><a href="#jQuery_u63D2_u4EF6_28dotdotdot-js_29" class="headerlink" title="jQuery插件(dotdotdot.js)"></a>jQuery插件(dotdotdot.js)</h3><p>不详细解释了,附上文档链接:<br><a href="http://dotdotdot.frebsite.nl/" target="_blank" rel="external">dotdotdot.js文档</a></p>
-<p>最后还有一种方法:让产品改需求,让设计改设计…</p>
+        <span itemprop="articleBody"><p>正则表达式有两种定义方法：</p>
+<blockquote>
+<p>/pattern/attrs<br>new RegExp(pattern,attrs)</p>
+</blockquote>
+<p>判断是否匹配正则表达式：</p>
+<blockquote>
+<p>regexObj.text(str)  //返回布尔值</p>
+</blockquote>
+<p>匹配一个位置</p>
+<blockquote>
+<p>^ : 匹配起始位置    /^http:/<br>$ : 匹配结尾位置    /.jpg$/<br>\b : 匹配单词边界   </p>
+</blockquote>
+<p>字符类匹配</p>
+<blockquote>
+<p>匹配一类字符中的一个<br>[abc] : a或b或c<br>[0-9] : 匹配0到9的数字<br>[^ 0-9] : 非数字    （^ 在字符类匹配中表示非）<br>[a-z] : 匹配一个字母<br>. : 匹配任意字符</p>
+</blockquote>
+<p>元字符（具有特殊意义的字符）</p>
+<blockquote>
+<p>\d : [0-9] 表示任意数字<br>\s : 空白字符<br>\w : [A-Za-z0-9_]  任意一个字母或数字或下划线<br>\S : 匹配所有非空字符<br>\D : 匹配所有非数字字符<br>\W : 匹配所有的字母、数字、下划线以外的字符<br>\B : 匹配非单词边界</p>
+</blockquote>
+<p>量词</p>
+<blockquote>
+<p>{m,n} : 表达式重复m到n次</p>
+<ul>
+<li>: {0,} 表达式不出现或出现任意次<br>? : {0,1} 匹配表达式0次或者1次</li>
+</ul>
+<ul>
+<li>: {1,} 至少出现一次 </li>
+</ul>
+</blockquote>
+<p>转义字符</p>
+<blockquote>
+<p>\ : 进行转义<br>\r,\n : 表示回车或者换行符<br>\t : 制表符</p>
+</blockquote>
+<p>多选分支</p>
+<blockquote>
+<p>| : 左右两边表达式之间 “或” 关系，匹配左边或者右边</p>
+</blockquote>
+<p>捕获</p>
+<blockquote>
+<p>保存匹配到的字符串，日后使用（调用：$1,$2 …）<br>( ) : 1. 在被修饰匹配次数的时候，括号中的表达式可以作为整体被修饰;2. 取匹配结果的时候，括号中的表达式匹配到的内容可以被单独得到<br>(?:) : 不捕获</p>
+</blockquote>
+<p>str.match(regexp) : 获取匹配的字符串<br>str.replace(regexp) : 匹配替换 </p>
+<blockquote>
+<p>str.replace(/(\d+)/g,’$1.00’)  //匹配所有数字，后面加.00<br></p>
+</blockquote>
 </span>
       
     </div>
@@ -260,7 +340,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web前端/" rel="tag">#web前端</a>
+            <a href="/tags/笔记-微专业/" rel="tag">#笔记 微专业</a>
           
         </div>
       
@@ -269,17 +349,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/13/css布局-水平垂直居中对齐/" rel="next" title="css布局-水平垂直居中对齐">
-                <i class="fa fa-chevron-left"></i> css布局-水平垂直居中对齐
+              <a href="/2016/04/23/网易微专业课程笔记－页面制作/" rel="next" title="网易微专业课程笔记－页面制作">
+                <i class="fa fa-chevron-left"></i> 网易微专业课程笔记－页面制作
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/26/记一次圣诞夜/" rel="prev" title="记一次圣诞夜">
-                记一次圣诞夜 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -306,8 +382,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/14/多行文本溢出显示省略号/"
-           data-title="多行文本溢出显示省略号..." data-url="http://yoursite.com/2015/12/14/多行文本溢出显示省略号/">
+      <div class="ds-thread" data-thread-key="2016/05/03/网易微专业课程笔记－正则表达式/"
+           data-title="网易微专业课程笔记－正则表达式" data-url="http://yoursite.com/2016/05/03/网易微专业课程笔记－正则表达式/">
       </div>
     
   </div>
@@ -423,7 +499,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#webkit-line-clamp"><span class="nav-number">1.</span> <span class="nav-text">-webkit-line-clamp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#o-ellipsis-lastline"><span class="nav-number">2.</span> <span class="nav-text">-o-ellipsis-lastline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery"><span class="nav-number">3.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery_u63D2_u4EF6_28dotdotdot-js_29"><span class="nav-number">4.</span> <span class="nav-text">jQuery插件(dotdotdot.js)</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
