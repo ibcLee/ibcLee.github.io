@@ -59,7 +59,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/04/23/网易微专业课程笔记－页面制作/index.html">
 <meta property="og:site_name" content="ibcLee's home">
 <meta property="og:description" content="前段时间报名了网易微专业课程，报名之前也考虑了很久，毕竟工作也快一年了，虽然技术还是很low但是要不要从头学起呢？进入前端领域一直是在自学，从切图开始，半吊子水平，没有个正确的姿势，也没有人指导是不是正确，反正最后能得到结果就行，比如css，对很多属性还不是很了解，但是一直在开发中没有用到，也没有仔细的去了解，反正最后样式是写出来了，一个属性可以搞定的事用了一堆hack，从基础过一遍，查缺补漏总是">
-<meta property="og:updated_time" content="2016-05-03T05:36:07.000Z">
+<meta property="og:updated_time" content="2016-05-03T06:28:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网易微专业课程笔记－页面制作">
 <meta name="twitter:description" content="前段时间报名了网易微专业课程，报名之前也考虑了很久，毕竟工作也快一年了，虽然技术还是很low但是要不要从头学起呢？进入前端领域一直是在自学，从切图开始，半吊子水平，没有个正确的姿势，也没有人指导是不是正确，反正最后能得到结果就行，比如css，对很多属性还不是很了解，但是一直在开发中没有用到，也没有仔细的去了解，反正最后样式是写出来了，一个属性可以搞定的事用了一堆hack，从基础过一遍，查缺补漏总是">
@@ -300,7 +300,9 @@
 <li><code>background-size</code>属性值为百分比时是相对容器的大小。</li>
 <li><code>background</code>缩写时，<code>position/size。</code></li>
 </ul>
-<h3 id="u5E03_u5C40"><a href="#u5E03_u5C40" class="headerlink" title="布局"></a>布局</h3><h3 id="u53D8_u5F62"><a href="#u53D8_u5F62" class="headerlink" title="变形"></a>变形</h3><h3 id="u52A8_u753B"><a href="#u52A8_u753B" class="headerlink" title="动画"></a>动画</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">•	animation-name: none||&lt;single-animation-name&gt;#       //自定义动画名字</span><br><span class="line">•	animation-duration: 0s||&lt;time&gt;#     //持续时间</span><br><span class="line">•	animation-timing-function: ease     //运动时间函数</span><br><span class="line">•	animation-delay: 0s    //延迟时间</span><br><span class="line">•	animation-iteration-count: 1   //动画重复次数</span><br><span class="line">•	animation-direction: normal||reverse||alternate||alternate-reverse      //是否轮流反向播放动画</span><br><span class="line">•	animation-fill-mode: none||forwards||backwards||both   //是否维持在动画开始或结束状态</span><br><span class="line">•	animation-play-state: running||paused         //动画的播放与暂停</span><br></pre></td></tr></table></figure>
+<h3 id="u5E03_u5C40"><a href="#u5E03_u5C40" class="headerlink" title="布局"></a>布局</h3><p>主要是flex布局，会单独一章整理纪录</p>
+<h3 id="u53D8_u5F62"><a href="#u53D8_u5F62" class="headerlink" title="变形"></a>变形</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform: rotate|translate|scale|skew|</span><br></pre></td></tr></table></figure>
+<h3 id="u52A8_u753B"><a href="#u52A8_u753B" class="headerlink" title="动画"></a>动画</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// transition (需要触发条件)</span><br><span class="line">   •	transition-property: none|all;</span><br><span class="line">   •	transition-duration: &lt;time&gt;;</span><br><span class="line">   •	transition-timing-function: ease|...;</span><br><span class="line">   •	transition-delay: &lt;time&gt;;</span><br><span class="line">// animation (不需要触发条件)</span><br><span class="line">	•	animation-name: none||&lt;single-animation-name&gt;#       //自定义动画名字</span><br><span class="line">	•	animation-duration: 0s||&lt;time&gt;#     //持续时间</span><br><span class="line">	•	animation-timing-function: ease     //运动时间函数</span><br><span class="line">	•	animation-delay: 0s    //延迟时间</span><br><span class="line">	•	animation-iteration-count: 1   //动画重复次数</span><br><span class="line">	•	animation-direction: normal||reverse||alternate||alternate-reverse      //是否轮流反向播放动画</span><br><span class="line">	•	animation-fill-mode: none||forwards||backwards||both   //是否维持在动画开始或结束状态</span><br><span class="line">	•	animation-play-state: running||paused         //动画的播放与暂停</span><br><span class="line">	</span><br><span class="line">	•	perspective: none|&lt;length&gt;  //透视效果，距离平面的距离，设置在透视元素的父级容器上</span><br><span class="line">	•	perspective-origin:[left|center|right|top|bottom|&lt;percentage&gt;|&lt;length&gt;]  //默认位置为center，既x轴50%、y轴50%的位置</span><br><span class="line">	</span><br><span class="line">	•	transform-style:flat|preserve-3d   //在变形元素里再放入一个变形元素时，在父元素上设置</span><br><span class="line">	•	backface-visibility: visible|hidden   //背面是否可见</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -400,7 +402,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -414,7 +416,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
