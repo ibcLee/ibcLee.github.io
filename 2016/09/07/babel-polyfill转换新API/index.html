@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tools," />
+  <meta name="keywords" content="web前端," />
 
 
 
@@ -53,16 +53,19 @@
 
 
 
-<meta name="description" content="之前使用windows的时候经常会重新装机，每次装机最痛苦的是还原之前已经用顺手的各种工具的环境，现在的mac虽然不会经常重新装机，单还是要记录一下自己经常用的各种工具的配置，先记录一下sublime。">
+<meta name="description" content="在新版创投圈开发中，我们使用react＋redux来开发个人中心部分，但是在测试浏览器兼容性的过程中，发现了一个问题，其实在babel的文档里早就说明了这个问题，但是一直没注意到。
+Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端程序员自我修养－sublime配置">
-<meta property="og:url" content="http://yoursite.com/2016/01/09/前端程序员自我修养－sublime配置/index.html">
+<meta property="og:title" content="babel-polyfill转换新API">
+<meta property="og:url" content="http://yoursite.com/2016/09/07/babel-polyfill转换新API/index.html">
 <meta property="og:site_name" content="ibcLee's home">
-<meta property="og:description" content="之前使用windows的时候经常会重新装机，每次装机最痛苦的是还原之前已经用顺手的各种工具的环境，现在的mac虽然不会经常重新装机，单还是要记录一下自己经常用的各种工具的配置，先记录一下sublime。">
-<meta property="og:updated_time" content="2016-03-07T05:11:34.000Z">
+<meta property="og:description" content="在新版创投圈开发中，我们使用react＋redux来开发个人中心部分，但是在测试浏览器兼容性的过程中，发现了一个问题，其实在babel的文档里早就说明了这个问题，但是一直没注意到。
+Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及">
+<meta property="og:updated_time" content="2016-09-07T07:11:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端程序员自我修养－sublime配置">
-<meta name="twitter:description" content="之前使用windows的时候经常会重新装机，每次装机最痛苦的是还原之前已经用顺手的各种工具的环境，现在的mac虽然不会经常重新装机，单还是要记录一下自己经常用的各种工具的配置，先记录一下sublime。">
+<meta name="twitter:title" content="babel-polyfill转换新API">
+<meta name="twitter:description" content="在新版创投圈开发中，我们使用react＋redux来开发个人中心部分，但是在测试浏览器兼容性的过程中，发现了一个问题，其实在babel的文档里早就说明了这个问题，但是一直没注意到。
+Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及">
 
 
 
@@ -74,7 +77,7 @@
   };
 </script>
 
-  <title> 前端程序员自我修养－sublime配置 | ibcLee's home </title>
+  <title> babel-polyfill转换新API | ibcLee's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -204,7 +207,7 @@
             
             
               
-                前端程序员自我修养－sublime配置
+                babel-polyfill转换新API
               
             
           </h1>
@@ -213,8 +216,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-09T11:27:11+08:00" content="2016-01-09">
-              2016-01-09
+            <time itemprop="dateCreated" datetime="2016-09-07T14:49:58+08:00" content="2016-09-07">
+              2016-09-07
             </time>
           </span>
 
@@ -224,8 +227,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/09/前端程序员自我修养－sublime配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/09/前端程序员自我修养－sublime配置/" itemprop="commentsCount"></span>
+                <a href="/2016/09/07/babel-polyfill转换新API/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/07/babel-polyfill转换新API/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -244,18 +247,14 @@
       
 
       
-        <span itemprop="articleBody"><p>之前使用windows的时候经常会重新装机，每次装机最痛苦的是还原之前已经用顺手的各种工具的环境，现在的mac虽然不会经常重新装机，单还是要记录一下自己经常用的各种工具的配置，先记录一下sublime。</p>
-<a id="more"></a>
-<h3 id="1-Theme_-_Brogrammer"><a href="#1-Theme_-_Brogrammer" class="headerlink" title="1.Theme - Brogrammer"></a>1.Theme - Brogrammer</h3><p>目前比较中意的一个主题，<a href="https://github.com/kenwheeler/brogrammer-theme" target="_blank" rel="external">Brogrammer</a>,不多说了，安装方式链接里都有，也可以通过package control 安装。</p>
-<h3 id="2-Emmet"><a href="#2-Emmet" class="headerlink" title="2.Emmet"></a>2.Emmet</h3><p>最为一名前端，这个是必须的啊。</p>
-<h3 id="3-Sass_Scss"><a href="#3-Sass_Scss" class="headerlink" title="3.Sass Scss"></a>3.Sass Scss</h3><p>sublime 默认是不支持Sass，Scss语法高亮的，需要安装支持语言的包。</p>
-<h3 id="4-SCSS_Compiler_2CSASS_Build"><a href="#4-SCSS_Compiler_2CSASS_Build" class="headerlink" title="4.SCSS Compiler,SASS Build"></a>4.SCSS Compiler,SASS Build</h3><p>将sass，scss编译成css的工具，在本地开发的时候，这个很有必要。</p>
-<h3 id="5-Ruby_Slim"><a href="#5-Ruby_Slim" class="headerlink" title="5.Ruby Slim"></a>5.Ruby Slim</h3><p>支持slim语法高亮。</p>
-<h3 id="6-Color_Highlight"><a href="#6-Color_Highlight" class="headerlink" title="6.Color Highlight"></a>6.Color Highlight</h3><p>css中颜色高亮显示。</p>
-<h3 id="7-BracketHighlighter"><a href="#7-BracketHighlighter" class="headerlink" title="7.BracketHighlighter"></a>7.BracketHighlighter</h3><p>就是在旁边显示行号的地方显示括号的闭合，检查代码块括号闭合的时候很有用。</p>
-<h3 id="8-AutoFileName"><a href="#8-AutoFileName" class="headerlink" title="8.AutoFileName"></a>8.AutoFileName</h3><p>插入文件的时候自动查找路径，也是写html，css的时候的神奇。</p>
-<h3 id="9-jQuery"><a href="#9-jQuery" class="headerlink" title="9.jQuery"></a>9.jQuery</h3><p>jQuery 语法的自动补全。</p>
-<p>嗯嗯。。。目前sublime就安装了这些，发现好的东西，会陆续在这里更新，不是教程，就是记录一下自己都安装过什么东西，方便日后。</p>
+        <span itemprop="articleBody"><p>在新版创投圈开发中，我们使用react＋redux来开发个人中心部分，但是在测试浏览器兼容性的过程中，发现了一个问题，其实在babel的文档里早就说明了这个问题，但是一直没注意到。</p>
+<p>Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如<code>Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise</code>等全局对象，以及一些定义在全局对象上的方法（比如<code>Object.assign</code>）都不会转码。</p>
+<p>举例来说，ES6在Array对象上新增了Array.from方法。Babel就不会转码这个方法。如果想让这个方法运行，必须使用babel-polyfill，为当前环境提供一个垫片（不懂，啥是垫片）。</p>
+<p>安装命令如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> <span class="comment">--save babel-polyfill</span></span></span><br></pre></td></tr></table></figure>
+<p>然后在脚本头部，加入</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#39;babel-polyfill&#39;;&#10;//&#25110;&#32773;&#10;require(&#39;babel-polyfill&#39;);</span><br></pre></td></tr></table></figure>
+<p>Babel默认不转码的API非常多，详细清单可以查看<code>babel-plugin-transform-runtime</code>模块的<a href="https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js" target="_blank" rel="external">definitions.js</a>文件。</p>
 </span>
       
     </div>
@@ -264,7 +263,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Tools/" rel="tag">#Tools</a>
+            <a href="/tags/web前端/" rel="tag">#web前端</a>
           
         </div>
       
@@ -273,17 +272,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/01/写于2016-01-01/" rel="next" title="写于2016-01-01">
-                <i class="fa fa-chevron-left"></i> 写于2016-01-01
+              <a href="/2016/07/28/使用ES6时浏览器兼容性问题/" rel="next" title="使用ES6时浏览器兼容性问题">
+                <i class="fa fa-chevron-left"></i> 使用ES6时浏览器兼容性问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/29/css选择器整理/" rel="prev" title="css选择器整理">
-                css选择器整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -310,8 +305,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/09/前端程序员自我修养－sublime配置/"
-           data-title="前端程序员自我修养－sublime配置" data-url="http://yoursite.com/2016/01/09/前端程序员自我修养－sublime配置/">
+      <div class="ds-thread" data-thread-key="2016/09/07/babel-polyfill转换新API/"
+           data-title="babel-polyfill转换新API" data-url="http://yoursite.com/2016/09/07/babel-polyfill转换新API/">
       </div>
     
   </div>
@@ -427,7 +422,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Theme_-_Brogrammer"><span class="nav-number">1.</span> <span class="nav-text">1.Theme - Brogrammer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Emmet"><span class="nav-number">2.</span> <span class="nav-text">2.Emmet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Sass_Scss"><span class="nav-number">3.</span> <span class="nav-text">3.Sass Scss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-SCSS_Compiler_2CSASS_Build"><span class="nav-number">4.</span> <span class="nav-text">4.SCSS Compiler,SASS Build</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Ruby_Slim"><span class="nav-number">5.</span> <span class="nav-text">5.Ruby Slim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Color_Highlight"><span class="nav-number">6.</span> <span class="nav-text">6.Color Highlight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-BracketHighlighter"><span class="nav-number">7.</span> <span class="nav-text">7.BracketHighlighter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-AutoFileName"><span class="nav-number">8.</span> <span class="nav-text">8.AutoFileName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-jQuery"><span class="nav-number">9.</span> <span class="nav-text">9.jQuery</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -59,7 +59,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/28/使用ES6时浏览器兼容性问题/index.html">
 <meta property="og:site_name" content="ibcLee's home">
 <meta property="og:description" content="近两个月网站进行改版，在不需要使用SEO的页面，技术主要采用webpack＋react＋redux＋ES6，由于是第一次使用react进行开发，所以开发的过程中，也都是边学边写，遇到了很多坑，今天先记录一个，其他的日后想到了会补上。由于使用了ES6的语法，所以在浏览器兼容问题上，使用Babel去进行编译，但最后在测试的过程中还是发现了一些低版本浏览器不兼容的问题，发现都是一些ES6的新语法在报错，">
-<meta property="og:updated_time" content="2016-07-28T06:41:06.000Z">
+<meta property="og:updated_time" content="2016-07-28T06:52:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ES6时浏览器兼容性问题">
 <meta name="twitter:description" content="近两个月网站进行改版，在不需要使用SEO的页面，技术主要采用webpack＋react＋redux＋ES6，由于是第一次使用react进行开发，所以开发的过程中，也都是边学边写，遇到了很多坑，今天先记录一个，其他的日后想到了会补上。由于使用了ES6的语法，所以在浏览器兼容问题上，使用Babel去进行编译，但最后在测试的过程中还是发现了一些低版本浏览器不兼容的问题，发现都是一些ES6的新语法在报错，">
@@ -250,7 +250,11 @@
 </blockquote>
 <h2 id="u89E3_u51B3_u65B9_u6CD5_uFF1Ababel-polyfill"><a href="#u89E3_u51B3_u65B9_u6CD5_uFF1Ababel-polyfill" class="headerlink" title="解决方法：babel-polyfill"></a>解决方法：babel-polyfill</h2><p>1.安装babel-polyfill</p>
 <blockquote>
-<p>npm install babel-polyfill –save<br>2.在入口文件中引入<br>import ‘babel-polyfill’</p>
+<p>npm install babel-polyfill –save</p>
+</blockquote>
+<p>2.在入口文件中引入</p>
+<blockquote>
+<p>import ‘babel-polyfill’</p>
 </blockquote>
 <p>做到这样，在大部分浏览器中就可以跑了</p>
 </span>
@@ -277,6 +281,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/07/babel-polyfill转换新API/" rel="prev" title="babel-polyfill转换新API">
+                babel-polyfill转换新API <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -348,7 +356,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
