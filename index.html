@@ -212,6 +212,208 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/08/JavaScript中的各种类型转换/" itemprop="url">
+                  JavaScript中的各种类型转换
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-09-08T14:53:01+08:00" content="2016-09-08">
+              2016-09-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/08/JavaScript中的各种类型转换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/JavaScript中的各种类型转换/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <table>
+<thead>
+<tr>
+<th>值</th>
+<th>转数字</th>
+<th>转字符串</th>
+<th>转布尔值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>NaN</td>
+<td>“undefined”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>null</td>
+<td>0</td>
+<td>“null”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>1</td>
+<td>“true”</td>
+</tr>
+<tr>
+<td>false</td>
+<td>0</td>
+<td>“false”</td>
+</tr>
+<tr>
+<td>0</td>
+<td></td>
+<td>“0”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>-0</td>
+<td></td>
+<td>“0”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td></td>
+<td>“NaN”</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Infinity</td>
+<td></td>
+<td>“Infinity”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>-Infinity</td>
+<td></td>
+<td>“-Infinity”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>1（非零）</td>
+<td></td>
+<td>“1”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>{ }(任意对象)</td>
+<td>0</td>
+<td>“”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>[ ].(任意数组)</td>
+<td>0</td>
+<td>“”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>[9].(包含一个数字元素)</td>
+<td>9</td>
+<td>“9”</td>
+<td>true</td>
+</tr>
+<tr>
+<td>[“a”].(其他数组)</td>
+<td>NaN</td>
+<td>使用.join()方法</td>
+<td>true</td>
+</tr>
+<tr>
+<td>function(){}(任意函数)</td>
+<td>NaN</td>
+<td>见下文</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>两个基本的转换方法：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">toString</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">valueOf</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<p>对象转字符串<br>具体步骤如下：</p>
+<ul>
+<li>如果有toString()方法，调用对象的toString()方法，如果返回一个字面量就把这个字面量转换成字符串并返回。字面量转字符串见上表。</li>
+<li>如果没有toString()方法或者没有返回字面量，并且有valueOf()方法，调用valueOf()方法。如果这个方法返回字面量就转换成字符串返回。</li>
+<li>如果以上两步都没有成功，就抛出一个类型错误异常。</li>
+</ul>
+<p>对象转数字<br>其实就是把对象转字符串的前两步调换一下，然后把返回结果都转成数字。<br>具体步骤如下：</p>
+<ul>
+<li>如果有velueOf()方法，调用valueOf()方法。如果这个方法返回字面量就转换成数字返回。</li>
+<li>如果没有valueOf()方法或者没有返回字面量，并且有toString()方法，调用对象的toString()方法，如果返回一个字面量就把这个字面量转换成数字并返回。字面量转数字见上表。</li>
+<li>如果以上两步都没有成功，就抛出一个类型错误异常。</li>
+</ul>
+<p>对象转字面量<br>有些特殊的运算符并不会把对象转换成数字或者字符串，而是转换成字面量。<br>对象转字面量的具体步骤和对象转数字的具体步骤一样，先调用valueOf()再调用toString()，区别是，对象转字面量并不会在返回之前把结果转换成字符串或者数字，也就是说没有上面步骤中的粗体部分。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/07/web性能优化14个原则/" itemprop="url">
                   web性能优化14个原则
                 </a>
@@ -1178,100 +1380,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/07/javaScript高级程序设计－数组/" itemprop="url">
-                  javaScript高级程序设计－数组
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-03-07T13:09:24+08:00" content="2016-03-07">
-              2016-03-07
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/07/javaScript高级程序设计－数组/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/07/javaScript高级程序设计－数组/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>毕业快一年了，一直没有全部看完任何一本javascript的书籍，在js方面，对一些概念的理解一直非常模糊，在平时的开发中还需要一遍一遍地查阅文档，这次打算好好过一下js方面的基础。这一次主要是梳理数组方面的主要操作方法。</p>
-<!-- more -->
-<h2 id="u6808_uFF0C_u961F_u5217_u65B9_u6CD5"><a href="#u6808_uFF0C_u961F_u5217_u65B9_u6CD5" class="headerlink" title="栈，队列方法"></a>栈，队列方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">push</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 向数组末位追加元素，返回值是新数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 移除数组中的最后一项，返回值是最后一项的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">shift</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 移除数组中的第一项，并返回该项的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">unshift</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 在数组的最前面追加元素，返回值是新数组的长度</span></span><br></pre></td></tr></table></figure>
-<h2 id="u91CD_u6392_u5E8F_u65B9_u6CD5"><a href="#u91CD_u6392_u5E8F_u65B9_u6CD5" class="headerlink" title="重排序方法"></a>重排序方法</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">reverse()</span><br><span class="line"><span class="comment">// 反转数组的顺序</span></span><br><span class="line"></span><br><span class="line">sort()</span><br><span class="line"><span class="comment">// 按升序排列数组项，会调用每一个数组项的toString()方法，可接受一个比较函数作为参数，比较函数接受两个参数。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span><span class="params">(v1,v2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> v2-v1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u64CD_u4F5C_u65B9_u6CD5"><a href="#u64CD_u4F5C_u65B9_u6CD5" class="headerlink" title="操作方法"></a>操作方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">concat</span><span class="params">([])</span></span></span><br><span class="line"><span class="comment">// 基于当前数组创建一个新数组，将方法中的参数的每一项添加到数组中，参数一般是一个数组对象，不改变原数组。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">slice</span><span class="params">(start,end)</span></span></span><br><span class="line"><span class="comment">// 返回数组中起始到结束为止的所有项，不包括结束位置的项，不影响原数组；如果只有一个参数，则返回起始到数组最后的所有项。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">splice</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 删除：(要删除的第一项，删除的项数)</span></span><br><span class="line"><span class="comment">// 插入：（起始位置，0，要插入的项）</span></span><br><span class="line"><span class="comment">// 替换：（起始位置，要删除的项数，要替换的项）</span></span><br></pre></td></tr></table></figure>
-<h2 id="u4F4D_u7F6E_u65B9_u6CD5"><a href="#u4F4D_u7F6E_u65B9_u6CD5" class="headerlink" title="位置方法"></a>位置方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">indexOf</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 接收参数：要查找的项；可以判断元素是否是数组中的某一项；如存在返回在数组中存在的位置，不存在返回－1.</span></span><br></pre></td></tr></table></figure>
-<h2 id="u8FED_u4EE3_u65B9_u6CD5"><a href="#u8FED_u4EE3_u65B9_u6CD5" class="headerlink" title="迭代方法"></a>迭代方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span><span class="params">(item,index,array)</span></span>  <span class="comment">//数组的每一项 位置 该数组</span></span><br><span class="line"><span class="function"><span class="title">every</span><span class="params">()</span></span> 对数组中的每一项运行给定的函数，如果每一项都返回true，则返回true。</span><br><span class="line"><span class="function"><span class="title">filter</span><span class="params">()</span></span> 对数组中的每一项运行给定的函数，返回true的项组成的数组。</span><br><span class="line"><span class="function"><span class="title">forEach</span><span class="params">()</span></span> 对数组的每一项运行给定的函数，没有返回值。</span><br><span class="line"><span class="function"><span class="title">map</span><span class="params">()</span></span> 返回每次函数调用的结果组成的数组。</span><br><span class="line"><span class="function"><span class="title">some</span><span class="params">()</span></span> 如果任意一项返回true，则返回true。</span><br></pre></td></tr></table></figure>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1318,7 +1426,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1332,7 +1440,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
