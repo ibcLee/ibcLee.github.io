@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        javaScript高级程序设计－数组 | ibcLee&#39;s home
+        javascript: 数组 | ibcLee&#39;s home
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ibclee.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="javaScript高级程序设计－数组 | ibcLee&#39;s home">
+    <meta property="og:title" content="javascript: 数组 | ibcLee&#39;s home">
     <meta property="og:description" content="李宝昌的个人博客">
     
      <!--[if lte IE 9]>
@@ -219,7 +219,7 @@
 		
 	
         <p class="article-headline-p">
-            javaScript高级程序设计－数组
+            javascript: 数组
         </p>
     </div>
 
@@ -237,7 +237,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ibcLee</strong>
-        <span>3月 07, 2016</span>
+        <span>3月 24, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -257,7 +257,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript-读书笔记-技术/">javaScript 读书笔记 技术</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a>
     </ul>
     
     <!-- Share -->
@@ -281,21 +281,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=javaScript高级程序设计－数组&url=http://ibclee.github.io//2016/03/07/javaScript高级程序设计－数组/index.html&via=ibcLee" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=javascript: 数组&url=http://ibclee.github.io//2017/03/24/javascript-数组/index.html&via=ibcLee" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://ibclee.github.io//2016/03/07/javaScript高级程序设计－数组/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://ibclee.github.io//2017/03/24/javascript-数组/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=javaScript高级程序设计－数组&url=http://ibclee.github.io//2016/03/07/javaScript高级程序设计－数组/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=javascript: 数组&url=http://ibclee.github.io//2017/03/24/javascript-数组/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -307,14 +307,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>毕业快一年了，一直没有全部看完任何一本javascript的书籍，在js方面，对一些概念的理解一直非常模糊，在平时的开发中还需要一遍一遍地查阅文档，这次打算好好过一下js方面的基础。这一次主要是梳理数组方面的主要操作方法。</p>
-<!-- more -->
-<h2 id="u6808_uFF0C_u961F_u5217_u65B9_u6CD5"><a href="#u6808_uFF0C_u961F_u5217_u65B9_u6CD5" class="headerlink" title="栈，队列方法"></a>栈，队列方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">push</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 向数组末位追加元素，返回值是新数组的长度</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 移除数组中的最后一项，返回值是最后一项的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">shift</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 移除数组中的第一项，并返回该项的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">unshift</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 在数组的最前面追加元素，返回值是新数组的长度</span></span><br></pre></td></tr></table></figure>
-<h2 id="u91CD_u6392_u5E8F_u65B9_u6CD5"><a href="#u91CD_u6392_u5E8F_u65B9_u6CD5" class="headerlink" title="重排序方法"></a>重排序方法</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">reverse()</span><br><span class="line"><span class="comment">// 反转数组的顺序</span></span><br><span class="line"></span><br><span class="line">sort()</span><br><span class="line"><span class="comment">// 按升序排列数组项，会调用每一个数组项的toString()方法，可接受一个比较函数作为参数，比较函数接受两个参数。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span><span class="params">(v1,v2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> v2-v1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u64CD_u4F5C_u65B9_u6CD5"><a href="#u64CD_u4F5C_u65B9_u6CD5" class="headerlink" title="操作方法"></a>操作方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">concat</span><span class="params">([])</span></span></span><br><span class="line"><span class="comment">// 基于当前数组创建一个新数组，将方法中的参数的每一项添加到数组中，参数一般是一个数组对象，不改变原数组。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">slice</span><span class="params">(start,end)</span></span></span><br><span class="line"><span class="comment">// 返回数组中起始到结束为止的所有项，不包括结束位置的项，不影响原数组；如果只有一个参数，则返回起始到数组最后的所有项。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">splice</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 删除：(要删除的第一项，删除的项数)</span></span><br><span class="line"><span class="comment">// 插入：（起始位置，0，要插入的项）</span></span><br><span class="line"><span class="comment">// 替换：（起始位置，要删除的项数，要替换的项）</span></span><br></pre></td></tr></table></figure>
-<h2 id="u4F4D_u7F6E_u65B9_u6CD5"><a href="#u4F4D_u7F6E_u65B9_u6CD5" class="headerlink" title="位置方法"></a>位置方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">indexOf</span><span class="params">()</span></span></span><br><span class="line"><span class="comment">// 接收参数：要查找的项；可以判断元素是否是数组中的某一项；如存在返回在数组中存在的位置，不存在返回－1.</span></span><br></pre></td></tr></table></figure>
-<h2 id="u8FED_u4EE3_u65B9_u6CD5"><a href="#u8FED_u4EE3_u65B9_u6CD5" class="headerlink" title="迭代方法"></a>迭代方法</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span><span class="params">(item,index,array)</span></span>  <span class="comment">//数组的每一项 位置 该数组</span></span><br><span class="line"><span class="function"><span class="title">every</span><span class="params">()</span></span> 对数组中的每一项运行给定的函数，如果每一项都返回true，则返回true。</span><br><span class="line"><span class="function"><span class="title">filter</span><span class="params">()</span></span> 对数组中的每一项运行给定的函数，返回true的项组成的数组。</span><br><span class="line"><span class="function"><span class="title">forEach</span><span class="params">()</span></span> 对数组的每一项运行给定的函数，没有返回值。</span><br><span class="line"><span class="function"><span class="title">map</span><span class="params">()</span></span> 返回每次函数调用的结果组成的数组。</span><br><span class="line"><span class="function"><span class="title">some</span><span class="params">()</span></span> 如果任意一项返回true，则返回true。</span><br></pre></td></tr></table></figure>
-
+		<pre><code>![数组](http://7xo3vd.com1.z0.glb.clouddn.com/%E6%95%B0%E7%BB%84.png)
+</code></pre>
 	
 	
 	
@@ -340,7 +334,7 @@
 </style>
 <div id="comments">
     <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="undefined" data-title="javaScript高级程序设计－数组" data-url="http://ibclee.github.io//2016/03/07/javaScript高级程序设计－数组/index.html"></div>
+        <div class="ds-thread" data-thread-key="undefined" data-title="javascript: 数组" data-url="http://ibclee.github.io//2017/03/24/javascript-数组/index.html"></div>
     <!-- 多说评论框 end -->
 </div>
 
@@ -353,21 +347,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/03/14/javaScript高级程序设计－apply-call/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/02/02/SASS用法整理/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/28/前端面试常见知识点整理/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -550,11 +536,9 @@ It will not impact the appearance and can give developers a lot of support :)
     
         <!-- Post Nav -->
         
-            <a class="prev-content fab" href="/2016/03/14/javaScript高级程序设计－apply-call/" title="javaScript高级程序设计－apply(),call()"><i class="material-icons">keyboard_arrow_left</i></a>
-        
 
         
-            <a class="prev-content fab" href="/2016/02/02/SASS用法整理/" title="SASS用法整理"><i class="material-icons">keyboard_arrow_right</i></a>
+            <a class="prev-content fab" href="/2017/02/28/前端面试常见知识点整理/" title="前端面试常见知识点整理"><i class="material-icons">keyboard_arrow_right</i></a>
         
     
     
