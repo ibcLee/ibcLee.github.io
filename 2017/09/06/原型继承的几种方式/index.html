@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        css布局整理 | ibcLee&#39;s home
+        原型继承的几种方式 | ibcLee&#39;s home
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ibclee.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="css布局整理 | ibcLee&#39;s home">
+    <meta property="og:title" content="原型继承的几种方式 | ibcLee&#39;s home">
     <meta property="og:description" content="李宝昌的个人博客">
     
      <!--[if lte IE 9]>
@@ -219,7 +219,7 @@
 		
 	
         <p class="article-headline-p">
-            css布局整理
+            原型继承的几种方式
         </p>
     </div>
 
@@ -237,7 +237,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>ibcLee</strong>
-        <span>6月 12, 2017</span>
+        <span>9月 06, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -257,7 +257,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/css/">css</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a>
     </ul>
     
     <!-- Share -->
@@ -281,21 +281,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=css布局整理&url=http://ibclee.github.io//2017/06/12/css布局整理/index.html&via=ibcLee" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=原型继承的几种方式&url=http://ibclee.github.io//2017/09/06/原型继承的几种方式/index.html&via=ibcLee" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://ibclee.github.io//2017/06/12/css布局整理/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://ibclee.github.io//2017/09/06/原型继承的几种方式/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=css布局整理&url=http://ibclee.github.io//2017/06/12/css布局整理/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=原型继承的几种方式&url=http://ibclee.github.io//2017/09/06/原型继承的几种方式/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -307,31 +307,42 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>工作了两年，最近发现竟然对什么左侧定宽啊右侧自适应啊各种布局有点懵逼了，这可是刚毕业求职的时候必考的啊，工作了两年一味地追求各种框架，对基础的知识反而有点陌生了，这里重新整理一下。垂直水平居中这里就不再多说了，之前整理过了，这里主要整理一下多列布局。<br>flex解决一切，有的布局就懒得用flex再实现一遍了，有时间单独整理一下。</p>
-<h3 id="u5DE6_u5217_u5B9A_u5BBD_uFF0C_u53F3_u5217_u81EA_u9002_u5E94"><a href="#u5DE6_u5217_u5B9A_u5BBD_uFF0C_u53F3_u5217_u81EA_u9002_u5E94" class="headerlink" title="左列定宽，右列自适应"></a>左列定宽，右列自适应</h3><h4 id="float_+_margin"><a href="#float_+_margin" class="headerlink" title="float + margin"></a>float + margin</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/0dy0kb64/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<p>优点：兼容IE7+，便于理解；缺点：不兼容IE6，在right内部第一个元素存在清除浮动时，会发生right掉下去的情况。</p>
-<h4 id="float_+_margin_+_fix"><a href="#float_+_margin_+_fix" class="headerlink" title="float + margin + fix"></a>float + margin + fix</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>;&#125;</span></span><br><span class="line"><span class="class">.right-fix</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>; <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">margin-left</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
- <iframe width="100%" height="300" src="http://jsfiddle.net/uwapsee7/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="float_+_overflow"><a href="#float_+_overflow" class="headerlink" title="float + overflow"></a>float + overflow</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
- <iframe width="100%" height="300" src="http://jsfiddle.net/tcazp7e1/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.demo4</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value"> table</span></span>;&#125;</span></span><br><span class="line"><span class="class">.left</span>, <span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value"> table-cell</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/c6v9f4j8/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;&#125;</span></span><br><span class="line"><span class="class">.left</span><span class="rules">&#123;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/Lf3teo39/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h3 id="u4E24_u5217_u5B9A_u5BBD_uFF0C_u4E00_u5217_u81EA_u9002_u5E94"><a href="#u4E24_u5217_u5B9A_u5BBD_uFF0C_u4E00_u5217_u81EA_u9002_u5E94" class="headerlink" title="两列定宽，一列自适应"></a>两列定宽，一列自适应</h3><h4 id="float_+_margin-1"><a href="#float_+_margin-1" class="headerlink" title="float + margin"></a>float + margin</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span>,<span class="class">.center</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123; <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">200px</span></span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/hgsa77ow/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="float_+_overflow-1"><a href="#float_+_overflow-1" class="headerlink" title="float + overflow"></a>float + overflow</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span>, <span class="class">.center</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/nkfoyk9v/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="table-1"><a href="#table-1" class="headerlink" title="table"></a>table</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value"> table</span></span>; <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.left</span>, <span class="class">.center</span>, <span class="tag">right</span><span class="rules">&#123; <span class="rule"><span class="attribute">display</span>:<span class="value"> table-cell</span></span>; &#125;</span></span><br><span class="line"><span class="class">.left</span>,<span class="class">.center</span><span class="rules">&#123;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/oewhj12r/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="flex-1"><a href="#flex-1" class="headerlink" title="flex"></a>flex</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span><span class="rules">&#123;<span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;&#125;</span></span><br><span class="line"><span class="class">.left</span>, <span class="class">.center</span><span class="rules">&#123;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/8fo5eyyh/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h3 id="u4E00_u5217_u4E0D_u5B9A_u5BBD_uFF0C__u4E00_u5217_u81EA_u9002_u5E94"><a href="#u4E00_u5217_u4E0D_u5B9A_u5BBD_uFF0C__u4E00_u5217_u81EA_u9002_u5E94" class="headerlink" title="一列不定宽， 一列自适应"></a>一列不定宽， 一列自适应</h3><h4 id="float_+_overflow-2"><a href="#float_+_overflow-2" class="headerlink" title="float + overflow"></a>float + overflow</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.left</span><span class="rules">&#123;<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;&#125;</span></span><br><span class="line"><span class="class">.right</span><span class="rules">&#123;<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<iframe width="100%" height="300" src="http://jsfiddle.net/p5kdaz4n/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h4 id="flex-2"><a href="#flex-2" class="headerlink" title="flex"></a>flex</h4><p>同上</p>
-<h3 id="u591A_u5217_u7B49_u5206_u5E03_u5C40"><a href="#u591A_u5217_u7B49_u5206_u5E03_u5C40" class="headerlink" title="多列等分布局"></a>多列等分布局</h3><iframe width="100%" height="300" src="http://jsfiddle.net/vL4revjg/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h3 id="u7B49_u9AD8_u5E03_u5C40"><a href="#u7B49_u9AD8_u5E03_u5C40" class="headerlink" title="等高布局"></a>等高布局</h3><p>高度最高的列决定所有列的高度，也就是说所有列的高度都是相等的，并且等于其中最高的列<br><iframe width="100%" height="300" src="http://jsfiddle.net/emod4077/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe></p>
+		<h2 id="1-__u539F_u578B_u94FE_u6CD5_uFF08_u4EFF_u4F20_u7EDF_uFF09"><a href="#1-__u539F_u578B_u94FE_u6CD5_uFF08_u4EFF_u4F20_u7EDF_uFF09" class="headerlink" title="1. 原型链法（仿传统）"></a>1. 原型链法（仿传统）</h2><h4 id="u4EE3_u7801_u793A_u4F8B"><a href="#u4EE3_u7801_u793A_u4F8B" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Child.prototype = <span class="keyword">new</span> Parent()</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F"><a href="#u6240_u5C5E_u6A21_u5F0F" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于构造器工作的模式<br>使用原型链模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3"><a href="#u6280_u672F_u6CE8_u89E3" class="headerlink" title="技术注解"></a>技术注解</h4><p>默认继承机制<br>提示：我们可以将方法与属性集中可重用的部分迁移到原型链中，而将不可重用的那部分设置为对象的自身属性</p>
+<h2 id="2-_u4EC5_u4ECE_u539F_u578B_u7EE7_u627F_u6CD5"><a href="#2-_u4EC5_u4ECE_u539F_u578B_u7EE7_u627F_u6CD5" class="headerlink" title="2.仅从原型继承法"></a>2.仅从原型继承法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-1"><a href="#u4EE3_u7801_u793A_u4F8B-1" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Child.prototype = Parent.prototype</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-1"><a href="#u6240_u5C5E_u6A21_u5F0F-1" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于构造器工作的模式<br>原型拷贝模式（不存在原型链，所有的对象共享一个原型对象）</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-1"><a href="#u6280_u672F_u6CE8_u89E3-1" class="headerlink" title="技术注解"></a>技术注解</h4><p>由于该模式在构建继承关系时不需要新建对象实例，效率上会有较好的表现<br>原型链上的查询也会比较快，因为这里根本不存在链<br>缺点在于，对子对象的修改会影响其父对象</p>
+<h2 id="3-_u4E34_u65F6_u6784_u9020_u5668_u6CD5"><a href="#3-_u4E34_u65F6_u6784_u9020_u5668_u6CD5" class="headerlink" title="3.临时构造器法"></a>3.临时构造器法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-2"><a href="#u4EE3_u7801_u793A_u4F8B-2" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">Child, Parent</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F.prototype = Parent.prototype</span><br><span class="line">	Child.prototype = <span class="keyword">new</span> F()</span><br><span class="line">	Child.prototype.constructor = Child</span><br><span class="line">	Child.uber = Parent.prototype</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-2"><a href="#u6240_u5C5E_u6A21_u5F0F-2" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于构造器工作的模式<br>使用原型链模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-2"><a href="#u6280_u672F_u6CE8_u89E3-2" class="headerlink" title="技术注解"></a>技术注解</h4><p>此模式不同于1号方法，它只继承父对象的原型属性，而对其自身属性（也就是被构造器添加到this值中的属性）则不予继承<br>另外，该模式还为我们访问父对象体提供了便利的方式（即通过uber属性）</p>
+<h2 id="4-_u539F_u578B_u5C5E_u6027_u62F7_u8D1D_u6CD5"><a href="#4-_u539F_u578B_u5C5E_u6027_u62F7_u8D1D_u6CD5" class="headerlink" title="4.原型属性拷贝法"></a>4.原型属性拷贝法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-3"><a href="#u4EE3_u7801_u793A_u4F8B-3" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend2</span>(<span class="params">Child, Parent</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> p = Parent.prototype</span><br><span class="line">	<span class="keyword">var</span> c = Child.prototype</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">		c[i] = p[i]</span><br><span class="line">	&#125;</span><br><span class="line">	c.uber = p</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-3"><a href="#u6240_u5C5E_u6A21_u5F0F-3" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于构造器工作模式<br>拷贝属性模式<br>使用原型模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-3"><a href="#u6280_u672F_u6CE8_u89E3-3" class="headerlink" title="技术注解"></a>技术注解</h4><p>将父对象原型中的内容全部转换成子对象原型属性<br>无须为继承单独创建对象实例<br>原型链本身也更短</p>
+<h2 id="5-_u5168_u5C5E_u6027_u62F7_u8D1D_u6CD5_uFF08_u5373_u6D45_u62F7_u8D1D_u6CD5_uFF09"><a href="#5-_u5168_u5C5E_u6027_u62F7_u8D1D_u6CD5_uFF08_u5373_u6D45_u62F7_u8D1D_u6CD5_uFF09" class="headerlink" title="5.全属性拷贝法（即浅拷贝法）"></a>5.全属性拷贝法（即浅拷贝法）</h2><h4 id="u4EE3_u7801_u793A_u4F8B-4"><a href="#u4EE3_u7801_u793A_u4F8B-4" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">extendCopy</span>(<span class="params">p</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> c = &#123;&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> p)&#123;</span><br><span class="line">		c[i] = p[i]</span><br><span class="line">	&#125;</span><br><span class="line">	c.uber = p</span><br><span class="line">	<span class="keyword">return</span> c</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-4"><a href="#u6240_u5C5E_u6A21_u5F0F-4" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>属性拷贝模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-4"><a href="#u6280_u672F_u6CE8_u89E3-4" class="headerlink" title="技术注解"></a>技术注解</h4><p>非常简单<br>没有使用原型属性</p>
+<h2 id="6-_u6DF1_u62F7_u8D1D_u6CD5"><a href="#6-_u6DF1_u62F7_u8D1D_u6CD5" class="headerlink" title="6.深拷贝法"></a>6.深拷贝法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-5"><a href="#u4EE3_u7801_u793A_u4F8B-5" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">同<span class="number">5</span>，只需在遇到对象类型时重复调用上述函数即可</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-5"><a href="#u6240_u5C5E_u6A21_u5F0F-5" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>属性拷贝模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-5"><a href="#u6280_u672F_u6CE8_u89E3-5" class="headerlink" title="技术注解"></a>技术注解</h4><p>与方法5基本相同，但所有对象执行的都是值传递</p>
+<h2 id="7-_u539F_u578B_u7EE7_u627F_u6CD5"><a href="#7-_u539F_u578B_u7EE7_u627F_u6CD5" class="headerlink" title="7.原型继承法"></a>7.原型继承法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-6"><a href="#u4EE3_u7801_u793A_u4F8B-6" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span>(<span class="params">o</span>)</span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F.prototype = o</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-6"><a href="#u6240_u5C5E_u6A21_u5F0F-6" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>使用原型链模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-6"><a href="#u6280_u672F_u6CE8_u89E3-6" class="headerlink" title="技术注解"></a>技术注解</h4><p>丢开仿类机制，直接在对象之间构建继承关系<br>发挥原型固有优势</p>
+<h2 id="8-__u6269_u5C55_u4E0E_u589E_u5F3A_u6A21_u5F0F"><a href="#8-__u6269_u5C55_u4E0E_u589E_u5F3A_u6A21_u5F0F" class="headerlink" title="8. 扩展与增强模式"></a>8. 扩展与增强模式</h2><h4 id="u4EE3_u7801_u793A_u4F8B-7"><a href="#u4EE3_u7801_u793A_u4F8B-7" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">objectPlus</span>(<span class="params">o,stuff</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> n</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F.prototype = o</span><br><span class="line">	n = <span class="keyword">new</span> F()</span><br><span class="line">	n.uber = o</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> stuff)&#123;</span><br><span class="line">		n[i] = stuff[i]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-7"><a href="#u6240_u5C5E_u6A21_u5F0F-7" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>使用原型链模式<br>属性拷贝模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-7"><a href="#u6280_u672F_u6CE8_u89E3-7" class="headerlink" title="技术注解"></a>技术注解</h4><p>该方法实际上是原型继承法（方法7）和属性拷贝法（方法5）的混合应用<br>它通过一个函数一次性完成对象的继承与扩展</p>
+<h2 id="9-_u591A_u91CD_u7EE7_u627F_u6CD5"><a href="#9-_u591A_u91CD_u7EE7_u627F_u6CD5" class="headerlink" title="9.多重继承法"></a>9.多重继承法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-8"><a href="#u4EE3_u7801_u793A_u4F8B-8" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multi</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> n = &#123;&#125;, stuff, j = <span class="number">0</span>, len = <span class="built_in">arguments</span>.length</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>; j &lt; len; j++)&#123;</span><br><span class="line">		stuff = <span class="built_in">arguments</span>[j]</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> stuff)&#123;</span><br><span class="line">			n[i] = stuff[i]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> n</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-8"><a href="#u6240_u5C5E_u6A21_u5F0F-8" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>属性拷贝模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-8"><a href="#u6280_u672F_u6CE8_u89E3-8" class="headerlink" title="技术注解"></a>技术注解</h4><p>一种混合插入式（mixin-style）继承实现<br>它会按照父对象的出现顺序依次对它们执行属性全拷贝</p>
+<h2 id="10-_u5BC4_u751F_u7EE7_u627F_u6CD5"><a href="#10-_u5BC4_u751F_u7EE7_u627F_u6CD5" class="headerlink" title="10.寄生继承法"></a>10.寄生继承法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-9"><a href="#u4EE3_u7801_u793A_u4F8B-9" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parasite</span>(<span class="params">victim</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> that = object(victim)</span><br><span class="line">	that.more = <span class="number">1</span></span><br><span class="line">	<span class="keyword">return</span> that</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-9"><a href="#u6240_u5C5E_u6A21_u5F0F-9" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于对象工作模式<br>使用原型链模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-9"><a href="#u6280_u672F_u6CE8_u89E3-9" class="headerlink" title="技术注解"></a>技术注解</h4><p>该方法通过一个类似构造器的函数来创建对象<br>该方法会执行相应的对象拷贝，并对其进行扩展，然后返回该拷贝</p>
+<h2 id="11-_u6784_u9020_u5668_u501F_u7528_u6CD5"><a href="#11-_u6784_u9020_u5668_u501F_u7528_u6CD5" class="headerlink" title="11.构造器借用法"></a>11.构造器借用法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-10"><a href="#u4EE3_u7801_u793A_u4F8B-10" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	Parent.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-10"><a href="#u6240_u5C5E_u6A21_u5F0F-10" class="headerlink" title="所属模式"></a>所属模式</h4><p>基于构造器工作模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-10"><a href="#u6280_u672F_u6CE8_u89E3-10" class="headerlink" title="技术注解"></a>技术注解</h4><p>该方法可以只继承父对象的自身属性<br>可以与方法1结合使用，以便从原型中继承相关内容<br>它便于我们的子对象继承某个对象的具体属性（并且还有可能是引用类属性）时，选择最简单的处理方式</p>
+<h2 id="12-_u6784_u9020_u5668_u501F_u7528_u4E0E_u5C5E_u6027_u62F7_u8D1D_u6CD5"><a href="#12-_u6784_u9020_u5668_u501F_u7528_u4E0E_u5C5E_u6027_u62F7_u8D1D_u6CD5" class="headerlink" title="12.构造器借用与属性拷贝法"></a>12.构造器借用与属性拷贝法</h2><h4 id="u4EE3_u7801_u793A_u4F8B-11"><a href="#u4EE3_u7801_u793A_u4F8B-11" class="headerlink" title="代码示例"></a>代码示例</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	Parent.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line">&#125;</span><br><span class="line">extend2(Child, Parent)</span><br></pre></td></tr></table></figure>
+<h4 id="u6240_u5C5E_u6A21_u5F0F-11"><a href="#u6240_u5C5E_u6A21_u5F0F-11" class="headerlink" title="所属模式"></a>所属模式</h4><p>使用构造器工作模式<br>使用原型链模式<br>属性拷贝模式</p>
+<h4 id="u6280_u672F_u6CE8_u89E3-11"><a href="#u6280_u672F_u6CE8_u89E3-11" class="headerlink" title="技术注解"></a>技术注解</h4><p>该方法是方法11与方法4的结合体<br>它允许我们在不重复调用父对象构造器的情况下同时继承其自身属性和原型属性</p>
 
 	
 	
@@ -376,21 +387,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/06/14/Flex布局整理/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/24/javascript-数组/" id="post_nav-older" class="next-content">
+        <a href="/2017/06/14/Flex布局整理/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -573,11 +576,9 @@ It will not impact the appearance and can give developers a lot of support :)
     
         <!-- Post Nav -->
         
-            <a class="prev-content fab" href="/2017/06/14/Flex布局整理/" title="Flex布局整理"><i class="material-icons">keyboard_arrow_left</i></a>
-        
 
         
-            <a class="prev-content fab" href="/2017/03/24/javascript-数组/" title="javascript: 数组"><i class="material-icons">keyboard_arrow_right</i></a>
+            <a class="prev-content fab" href="/2017/06/14/Flex布局整理/" title="Flex布局整理"><i class="material-icons">keyboard_arrow_right</i></a>
         
     
     
