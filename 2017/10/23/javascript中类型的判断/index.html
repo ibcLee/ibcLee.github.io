@@ -312,7 +312,7 @@
 <li>原始类型：Null、Undefined、Boolean、String、Number</li>
 <li>对象类型：Object</li>
 </ol>
-<p>对象类型又可以基本分为三大类：原生对象、宿主对象和浏览器扩展对象，可参考下图：<br><img src="/media/15087682079136.jpg" alt=""></p>
+<p>对象类型又可以基本分为三大类：原生对象、宿主对象和浏览器扩展对象，可参考下图：<br><img src="http://7xo3vd.com1.z0.glb.clouddn.com/15087682079136.jpg" alt=""></p>
 <p>那么如何准确地判别各种类型呢？</p>
 <p>js判别类型的方式主要有以下几种：<br><strong>1. typeof</strong><br><strong>2. Instanceof</strong><br><strong>3. Object.prototype.toString.call</strong><br><strong>4. constructor</strong></p>
 <p>下面分别针对这些判别方式做一下总结:</p>
@@ -335,7 +335,7 @@
 <li>判别自定义对象类型</li>
 </ul>
 <p>我们可以自己封装一个方法去判别所有的类型</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getConstructorName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj &amp;&amp; obj.constructor &amp;&amp; obj.prototype.toString.match(<span class="regexp">/function\s*([^(]*)/</span>)[<span class="number">1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getConstructorName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj &amp;&amp; </span><br><span class="line">	obj.constructor &amp;&amp; </span><br><span class="line">	obj.prototype.toString.match(<span class="regexp">/function\s*([^(]*)/</span>)[<span class="number">1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 	
 	
